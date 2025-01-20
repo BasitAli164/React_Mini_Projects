@@ -53,20 +53,20 @@ const CustomeSlider = () => {
           </button>
          {
           showMore && (
-            <div  className="flex flex-col justify-center items-center">
-              <h2>Product Detail</h2>
-              <table className="flex flex-col juc border-[2px] border-solid border-gray-400 mt-2  w-[600px]">
-                <thead >
-                  <th className="flex justify-center items-center ">
+            <div  className="flex flex-col justify-center items-center w-[900px] bg-red-300 ">
+              <h2 className="text-3xl font-bold">Product Detail</h2>
+              <table className="bg-white w-full flex flex-col ">
+                <thead className="bg-gray-400 w-full ">
+                  <th className="flex justify-between items-center text-xl uppercase font-normal">
                     <td>Name</td>
-                    <td>price</td>
+                    <td className="ml-32">price</td>
                     <td>Category</td>
-                    <td>Size</td>
+                    <td className="ml-5">Size</td>
                     <td>Rating</td>
                   </th>
                 </thead>
-                <tbody>
-                  <tr className="flex justify-center items-center ">
+                <tbody className="w-full bg-stone-500 mx-auto ">
+                  <tr className="flex justify-between">
                     <td>{product.title}</td>
                     <td>{product.price}</td>
                     <td>{product.category}</td>
