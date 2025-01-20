@@ -29,14 +29,14 @@ const CustomeSlider = () => {
   return (
     <>
       <section className="flex flex-col justify-center items-center bg-[#E8F9FF] w-full h-screen gap-2  ">
-        <div className="flex justify-center items-center gap-52">
+        <div className="flex justify-center items-center gap-20 mt-[-100px]">
           <div>
             <button onClick={handlePrevious}>
               <ChevronLeft />
             </button>
           </div>
-          <div className="w-[500px] h-[400px] bg-blue-200" >
-            <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center w-[300px] h-[300px] bg-blue-200 shadow-2xl rounded-md hover:scale-[1.1] duration-[3s]" >
+            <div className="flex items-center justify-center">
               <img className="w-3/4" src={product.images[1]} alt="Product-Image" />
             </div>
           </div>
@@ -47,14 +47,36 @@ const CustomeSlider = () => {
           </div>
         </div>
 
-        <div>
+        <div  className="flex flex-col justify-center items-center mt-10">
           <button onClick={handleToggle}>
             {showMore ? <ChevronUp /> : <ChevronDown />}
           </button>
          {
           showMore && (
-            <div>
-            <p>ProudctName:{product.title}</p>
+            <div  className="flex flex-col justify-center items-center">
+              <h2>Product Detail</h2>
+              <table className="flex flex-col juc border-[2px] border-solid border-gray-400 mt-2  w-[600px]">
+                <thead >
+                  <th className="flex justify-center items-center ">
+                    <td>Name</td>
+                    <td>price</td>
+                    <td>Category</td>
+                    <td>Size</td>
+                    <td>Rating</td>
+                  </th>
+                </thead>
+                <tbody>
+                  <tr className="flex justify-center items-center ">
+                    <td>{product.title}</td>
+                    <td>{product.price}</td>
+                    <td>{product.category}</td>
+                    <td>{product.availableSizes[0]}</td>
+                    <td>{product.rating}</td>
+
+
+                  </tr>
+                </tbody>
+              </table>
           </div>
           )
          }
