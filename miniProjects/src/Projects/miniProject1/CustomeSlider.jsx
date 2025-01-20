@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { dummyProducts } from "../assets/Data.js";
+import { dummyProducts } from "../../assets/Data.js";
 import {
   ChevronLeft,
   ChevronRight,

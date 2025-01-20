@@ -1,10 +1,12 @@
 import React from 'react'
-import CustomeSlider from './miniProject1/CustomeSlider'
+import CustomeSlider from './Projects/miniProject1/CustomeSlider'
+import FeedbackSystem from './Projects/miniProject2/FeedbackSystem'
 
 const App = () => {
   return (
     <>
-    <CustomeSlider/>
+    {/* <CustomeSlider/> */}
+    <FeedbackSystem/>
     </>
   )
 }
