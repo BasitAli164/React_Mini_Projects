@@ -10,6 +10,10 @@ const FeedbackSystem = () => {
     await sendMessage(text);
     setIsSending(false)
     setIsSent(true)
+    setTimeout(() => {
+        setIsSent(false)
+        
+    }, 3000);
     setText('')
   };
   return (
@@ -24,16 +28,17 @@ const FeedbackSystem = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
             className="border-[2px] border-solid border-gray-400 "
+            required
           ></textarea>
           <br />
           <input className="border-[2px] border-solid border-gray-500 px-8 py-2 rounded-md bg-slate-400 hover:bg-gray-500 text-stone-900 hover:cursor-pointer" type="submit" value="submit" disabled={isSending}/>
           {isSending &&(
-            <span className="ml-10 text-blue-500 ">Sending...{text}</span>
+            <span className="ml-10 text-blue-500 ">Sending....</span>
           )}
         </form>
         {
             isSent ?(
-                <h3>Thandk for give feedback</h3>
+                <h3>Thanks for give feedback</h3>
             ):''
         }
       </section>
