@@ -2,8 +2,12 @@ import React, { useState } from "react";
 
 const FeedbackSystem = () => {
   const [text, setText] = useState("");
-  const handleSubmit = (e) => {
+  const [isSending,setIsSending]=useState(false)
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    setIsSending(true)
+    await sendMessage(text);
+    setIsSending(false)
   };
   return (
     <>
@@ -16,6 +20,7 @@ const FeedbackSystem = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
             className="border-[2px] border-solid border-gray-400 "
+            disabled={isSending}
           ></textarea>
           <br />
           <input type="submit" value="submit" />
