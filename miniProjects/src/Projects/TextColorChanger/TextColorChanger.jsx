@@ -5,7 +5,20 @@ const TextColorChanger = () => {
   return (
     <>
      <section>
+      <div>
+        <select onChange={(e)=>setColors(e.target.value)}>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="yellow">Yellow</option>
+          <option value="brown">Brown</option>
+          <option value="pink">Pink</option>
+          <option value="orange">Orange</option>
+          <option value="purple">Purple</option>
+        </select>
+      </div>
     <TextColorChangerChild color={colors}/>
+
     </section> 
     </>
   )
