@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomeSlider from './assets/miniProject1/CustomeSlider'
+import CustomeSlider from './miniProject1/CustomeSlider'
 
 const App = () => {
   return (
