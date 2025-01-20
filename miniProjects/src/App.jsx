@@ -6,7 +6,8 @@ const App = () => {
   return (
     <>
     {/* <CustomeSlider/> */}
-    <FeedbackSystem/>
+    {/* <FeedbackSystem/> */}
+    
     </>
   )
 }
