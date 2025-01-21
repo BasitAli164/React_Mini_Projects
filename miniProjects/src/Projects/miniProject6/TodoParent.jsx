@@ -10,6 +10,12 @@ const initailTodos=[
 
 const TodoParent = () => {
     const [todos,setTodos]=useState(initailTodos);
+    const handleAddTodo=(title)=>{
+        setTodos([
+            ...todos,
+            {...todos,title:title}
+        ])
+    }
   return (
     <>
     <AddTodo onAddTodo={handleAddTodo}/>
