@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import AddTodo from './AddTodo';
+import Tasklist from './Tasklist';
 
 const initailTodos=[
     {id:0,title:'Wake Early Morning',done:true},
@@ -10,6 +12,8 @@ const TodoParent = () => {
     const [todos,setTodos]=useState(initailTodos);
   return (
     <>
+    <AddTodo onAddTodo={handleAddTodo}/>
+    <Tasklist todos={todos} onChangeTodo={handleChangeTodo} onDeleteTodo={handleDelete}/>
       
     </>
   )
