@@ -26,11 +26,11 @@ const TodoParent = () => {
         todos.filter((item)=>item.id!==todoId)
     }
   return (
-    <>
+    <div className='bg-cyan-500 w-full h-screen flex flex-col justify-center items-center'>
     <AddTodo onAddTodo={handleAddTodo}/>
     <Tasklist todos={todos} onChangeTodo={handleChangeTodo} onDeleteTodo={handleDelete}/>
       
-    </>
+    </div>
   )
 }
 

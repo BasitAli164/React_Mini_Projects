@@ -5,8 +5,8 @@ const Tasklist = ({todos,onChangeTodo, onDeleteTodo}) => {
     <>
       <ul>
         {
-            todos.map(todo=>(
-                <li key={todo.id}>
+            todos.map((todo,index)=>(
+                <li key={index}>
                     <Task
                     todo={todo}
                     onChange={onChangeTodo}
