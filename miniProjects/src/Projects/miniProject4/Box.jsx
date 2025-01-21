@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
 const Box = ({children,color,position,onMove}) => {
+
+    // console.log(`Color is: ${color}  Position: ${position}  onMove : ${onMove}`)
     const [lastCoordinates,setLastCoordinates]=useState(null);
     const handlePointerDown=(e)=>{
         e.target.setPointerCapture(e.pointerId)
@@ -17,6 +19,7 @@ const Box = ({children,color,position,onMove}) => {
 
             })
             const dx=e.clientX - lastCoordinates.x;
+            console.log("Dx is:",dx)
             const dy=e.clientY - lastCoordinates.y;
             onMove(dx,dy)
         }
