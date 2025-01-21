@@ -16,6 +16,15 @@ const TodoParent = () => {
             {...todos,title:title}
         ])
     }
+    const handleChangeTodo=(nextTodo)=>{
+        const todo=todos.find((item)=>item.id===nextTodo.id)
+        todo.title=nextTodo.title
+        todo.done=nextTodo.done
+
+    }
+    const handleDelete=(todoId)=>{
+        todos.filter((item)=>item.id!==todoId)
+    }
   return (
     <>
     <AddTodo onAddTodo={handleAddTodo}/>
