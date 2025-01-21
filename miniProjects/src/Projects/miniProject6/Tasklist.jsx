@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Tasklist = () => {
+const Tasklist = ({todos,onChangeTodo, onDeleteTodo}) => {
   return (
     <>
       
