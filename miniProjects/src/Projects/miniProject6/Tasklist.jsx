@@ -58,6 +58,7 @@ const Task=({todo,onChange,onDelete})=>{
                 })
             }} />
             {todoContent}
+            <button onClick={()=>onDelete(todo.id)}>Delete</button>
         </label>
         </>
     )
