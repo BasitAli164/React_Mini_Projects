@@ -34,7 +34,7 @@ const Task=({todo,onChange,onDelete})=>{
 
                 
             })} />
-            <button className='bg-red-400 px-10 py-2' onClick={()=>setIsEditing(false)}>
+            <button className='bg-red-400 px-10 py-2 mx-10 rounded-full' onClick={()=>setIsEditing(false)}>
                 Save
             </button>
             </>
@@ -44,7 +44,7 @@ const Task=({todo,onChange,onDelete})=>{
         todoContent=(
             <>
             {todo.title}
-            <button onClick={()=>setIsEditing(true)}>Edit</button>
+            <button className='bg-red-400 px-10 py-2 mx-10 rounded-full' onClick={()=>setIsEditing(true)}>Edit</button>
             </>
         )
     }
@@ -58,7 +58,7 @@ const Task=({todo,onChange,onDelete})=>{
                 })
             }} />
             {todoContent}
-            <button onClick={()=>onDelete(todo.id)}>Delete</button>
+            <button className='bg-red-400 px-10 py-2 mx-10 rounded-full mt-10' onClick={()=>onDelete(todo.id)}>Delete</button>
         </label>
         </>
     )
