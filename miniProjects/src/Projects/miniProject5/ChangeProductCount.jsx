@@ -9,16 +9,25 @@ const initailProduct=[
 const ChangeProductCount = () => {
     const [product,setProduct]=useState(initailProduct);
     console.log("the initail Product is:",product)
+    const handleClick=(productId)=>{
+        setProduct(product.map((item)=>{
+            if(item.id===productId) return {...item,count:item.count+1}
+            else return item               
+        }))
+    }
   return (
     <>
     <ul>
         {
             product.map((item,index)=>(
-                <li>
+                <li key={item.id}>
                     {item.name}
                     {" "}
-                    (<b>{count}</b>)
-                    <button onClick={()=>}>+</button>
+                    (<b>{item.count}</b>)
+                    <button onClick={()=>{
+                        console.log("item inside of the button",item)
+                        handleClick(item.id)
+                        }}>+</button>
                 </li>
             ))
         }
