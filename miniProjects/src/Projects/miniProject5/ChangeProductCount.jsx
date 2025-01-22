@@ -17,14 +17,15 @@ const ChangeProductCount = () => {
     }
   return (
     <>
-    <ul>
+    <ul className='flex flex-col justify-center items-center h-screen w-full'>
+        <h2 className='text-xl '>Click Button and Increase the number inside the parenthesis </h2>
         {
             product.map((item,index)=>(
-                <li key={item.id}>
+                <li className='text-xl mx-2  text-justify' key={item.id}>
                     {item.name}
                     {" "}
-                    (<b>{item.count}</b>)
-                    <button onClick={()=>{
+                    (<b className='font-bold text-xl'>{item.count}</b>)
+                    <button className='mx-10 py-2 px-10 mt-2 rounded-full bg-cyan-500' onClick={()=>{
                         console.log("item inside of the button",item)
                         handleClick(item.id)
                         }}>+</button>
