@@ -34,7 +34,7 @@ const Task=({todo,onChange,onDelete})=>{
 
                 
             })} />
-            <button onClick={()=>setIsEditing(false)}>
+            <button className='bg-red-400 px-10 py-2' onClick={()=>setIsEditing(false)}>
                 Save
             </button>
             </>
