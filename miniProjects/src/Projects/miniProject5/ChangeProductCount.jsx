@@ -12,25 +12,22 @@ const ChangeProductCount = () => {
   const handleClick = (productId) => {
     setProduct(
       product.map((item) => {
-        console.log("item dot count is:",item.count)
+        console.log("item dot count is:", item.count);
         if (item.id === productId) return { ...item, count: item.count + 1 };
         else return item;
       })
     );
   };
-  const handleDecreasing=(productId)=>{
-        let prod=product.map((item,index)=>{
-            if(item.id=productId){
-                console.log("id of item count is:",item.count)
-                return {...item,count:item.count-1}
+  const handleDecreasing = (productId) => {
+    const prod = product
+      .map((item) => {
+        if (item.id === productId) return { ...item, count: item.count - 1 };
+        else return item;
+      })
+      .filter((item) => item.count > 0);
 
-            }else{
-                return item
-            }
-        })
-       prod=prod.filter((item)=>item.count > 0)
-       setProduct(prod)
-  }
+    setProduct(prod);
+  };
   return (
     <>
       <ul className="flex flex-col justify-center items-center h-screen w-full">
@@ -38,7 +35,7 @@ const ChangeProductCount = () => {
           Click Button and Increase the number inside the parenthesis{" "}
         </h2>
         {product.map((item, index) => (
-          <li className="text-xl mx-2  text-justify" key={item.id}>
+          <li className="text-xl mx-2  text-justify" key={index}>
             {item.name} (<b className="font-bold text-xl">{item.count}</b>)
             <button
               className="mx-10 py-2 px-10 mt-2 rounded-full bg-cyan-500"
