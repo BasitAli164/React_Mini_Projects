@@ -23,7 +23,7 @@ export default function Gallery() {
       <h3>
         Image {index + 1} of {images.length}
       </h3>
-      <img key={index} className='w-[10%]' src={image.src} />
+      <img key={image.src} className='w-[10%]' src={image.src} />
       <p>
         {image.place}
       </p>
