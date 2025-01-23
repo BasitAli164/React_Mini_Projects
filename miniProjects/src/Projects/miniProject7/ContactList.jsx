@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import EditContact from './EditContact';
 const initailContact=[
     {id:1,name:"Basit Ali",email:"Abdupa911@gmail.com"},
     {id:2,name:"Muhammad Ali",email:"mali@gmail.com"},
@@ -11,8 +12,19 @@ const initailContact=[
 const ContactList = () => {
     const [contact,setContact]=useState(initailContact);
     const [selectedId,setSelectedId]=useState(1)
+
+    const selectedContact=contact.find((contactId)=>contactId.id===selectedId)
+
+    function  handleSave(){
+
+    }
   return (
     <>
+    <div>
+        <ContactList/>
+        <hr />
+        <EditContact/>
+    </div>
       
     </>
   )
