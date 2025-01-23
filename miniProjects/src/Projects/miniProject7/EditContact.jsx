@@ -24,6 +24,10 @@ const EditContact = ({initialData,onSave}) => {
         }}>
             Save
         </button>
+        <button onClick={()=>{
+            setName(initialData.name)
+            setEmail(initialData.email)
+        }}>Reset</button>
     </section>
       
     </>
