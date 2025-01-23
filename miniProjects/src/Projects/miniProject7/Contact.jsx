@@ -17,6 +17,7 @@ const Contact = () => {
     const selectedContact=contact.find((contactId)=>contactId.id===selectedId)
 
     function  handleSave(updateData){
+      console.log("the update data in Contact",updateData)
       const nextContact=contact.map((item)=>{
         if(item.id===updateData.id){
           return updateData
@@ -30,7 +31,7 @@ const Contact = () => {
    
   return (
     <>
-    <div>
+    <div className='w-full h-screen bg-cyan-200'>
         <ContactList
           contacts={contact}
           selectedId={selectedId}

@@ -4,7 +4,7 @@ const ContactList = ({contacts,selectedId,onSelect}) => {
   return (
     <>
     <section>
-        <ul>
+        <ul className='mb-10'>
             {
                 contacts.map((item)=>(
                     <li key={item.id}>
