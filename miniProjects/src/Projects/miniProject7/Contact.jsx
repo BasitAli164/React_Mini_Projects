@@ -13,6 +13,7 @@ const initailContact=[
 const Contact = () => {
     const [contact,setContact]=useState(initailContact);
     const [selectedId,setSelectedId]=useState(1)
+    console.log("The original data is:",contact)
 
     const selectedContact=contact.find((contactId)=>contactId.id===selectedId)
 
@@ -42,6 +43,7 @@ const Contact = () => {
         <EditContact 
         initialData={selectedContact}
         onSave={handleSave}
+        key={selectedId}
         />
     </div>
       
