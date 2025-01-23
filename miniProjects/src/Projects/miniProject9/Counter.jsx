@@ -5,9 +5,9 @@ const Counter = () => {
     console.log("the counter is:",counter)
   return (
     <div>
-      <button onClick={()=>setConter(counter-1)}>minus</button>
-      {counter}
-      <button onClick={()=>setConter(counter+1)}>Plus</button>
+      <button className='px-10 py-2 mx-8 rounded-full bg-cyan-300' onClick={()=>setConter(counter-1)}>minus</button>
+      <span className='text-xl font-bold'>Counter: {counter}</span>
+      <button className='px-10 py-2 mx-8 rounded-full bg-cyan-300' onClick={()=>setConter(counter+1)}>Plus</button>
     </div>
   )
 }
