@@ -14,7 +14,7 @@ const EditContact = ({initialData,onSave}) => {
             Email: {" "}
             <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} />
         </label>
-        <button>
+        <button onClick={}>
             Save
         </button>
     </section>

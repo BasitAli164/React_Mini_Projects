@@ -15,15 +15,32 @@ const Contact = () => {
 
     const selectedContact=contact.find((contactId)=>contactId.id===selectedId)
 
-    function  handleSave(){
+    function  handleSave(updateData){
+      const nextContact=contact.map((item)=>{
+        if(item.id===updateData.id){
+          return updateData
+        }else{
+          return item
+        }
+        setContact(nextContact)
+      })
 
     }
+   
   return (
     <>
     <div>
-        <ContactList/>
+        <ContactList
+          contacts={contact}
+          selectedId={selectedId}
+          onSelect={(id)=>setSelectedId(id)}
+        
+        />
         <hr />
-        <EditContact/>
+        <EditContact 
+        initialData={selectedContact}
+        onSave={handleSave}
+        />
     </div>
       
     </>
