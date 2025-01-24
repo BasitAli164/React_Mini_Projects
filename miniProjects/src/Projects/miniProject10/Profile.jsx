@@ -19,13 +19,14 @@ const Profile = () => {
       </Card>
     </div>
       
-    </div>
+
   )
 }
 
 export default Profile
 
-function Cart({children}){
+function Card({children}){
+    console.log(children)
     return(
         <>
         <div>
