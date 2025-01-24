@@ -8,6 +8,7 @@ import TodoParent from './Projects/miniProject6/TodoParent'
 import Contact from './Projects/miniProject7/Contact'
 import Project8 from './Projects/miniProject8/Project8'
 import Counter from './Projects/miniProject9/Counter'
+import Profile from './Projects/miniProject10/Profile'
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
     {/* <Contact/> Again */}
     {/* <Project8/> */}
     {/* <Counter/> */}
+    <Profile/>
 
 
     </>
