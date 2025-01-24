@@ -13,6 +13,11 @@ const Profile = () => {
           height={100}
         />
       </Card>
+      <Card>
+        <h1>About</h1>
+        <p>Aklilu Lemma was a distinguished Ethiopian scientist who discovered a natural treatment to schistosomiasis.</p>
+      </Card>
+    </div>
       
     </div>
   )
