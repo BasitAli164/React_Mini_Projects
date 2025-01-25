@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react';
+
+let nextId=4;
+const initailTodos=[
+  {id:0,title:'Tution',done:true},
+  {id:2,title:'Charging',done:true},
+  {id:3,title:'Practice',done:false},
+]
 
 const Todo = () => {
+  const [todos,setTodos]=useState(initailTodos)
   return (
-    <div>
+    <>
+    <label htmlFor=""></label>
       
-    </div>
+    </>
   )
 }
 
