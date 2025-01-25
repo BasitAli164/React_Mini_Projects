@@ -37,20 +37,12 @@ const Todo = () => {
   }
   
   return (
-    <>
+    <div className='w-full h-screen flex justify-center flex-col items-center'>
     <AddTodo onAddTodo={handleAddTodo}/>
-    <TaskList onChangeTodo={handleChangeTodo} onDeleteTodo={handleDeleteTodo}/>
-    <ul>
-      {
-        todos.map((item)=>(
-          <li key={item.id}>
-            <span>{item.title}</span>
-          </li>
-        ))
-      }
-    </ul>
+      <TaskList todos={todos} onChangeTodo={handleChangeTodo} onDeleteTodo={handleDeleteTodo}/>
+    
       
-    </>
+    </div>
   )
 }
 
