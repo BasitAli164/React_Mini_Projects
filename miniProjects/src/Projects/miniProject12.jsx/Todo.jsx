@@ -10,7 +10,9 @@ const initialTodo=[
 
 const Todo = () => {
   const [todo,setTodo]=useState(initialTodo);
-  const [todoTitle,setTodoTittle]=useState("")
+  const [todoTitle,setTodoTittle]=useState("");
+  const [check,setCheck]=useState(false);
+  const [isEditing,setIsEditing]=useState(false);
   console.log("Todo is:",todo)
 
   const handleAddTodo=(title)=>{
@@ -42,7 +44,7 @@ const Todo = () => {
         >Add</button>
     </div>
       <div>
-        
+
       </div>
     </section>
     </>
