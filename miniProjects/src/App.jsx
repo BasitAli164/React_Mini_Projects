@@ -10,6 +10,7 @@ import Project8 from './Projects/miniProject8/Project8'
 import Counter from './Projects/miniProject9/Counter'
 import Profile from './Projects/miniProject10/Profile'
 import Project11 from './Projects/miniProject11/Project11'
+import Todo from './Projects/miniProject12.jsx/Todo'
 
 
 const App = () => {
@@ -26,7 +27,8 @@ const App = () => {
     {/* <Project8/> */}
     {/* <Counter/> */}
     {/* <Profile/> */}
-    <Project11/>
+    {/* <Project11/> */}
+    <Todo/>
 
 
     </>
