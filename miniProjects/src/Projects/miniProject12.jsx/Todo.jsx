@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import AddTodo from './AddTodo';
+import TaskList from './TaskList';
 
 let nextId=4;
 const initailTodos=[
@@ -11,7 +13,8 @@ const Todo = () => {
   const [todos,setTodos]=useState(initailTodos)
   return (
     <>
-    <label htmlFor=""></label>
+    <AddTodo/>
+    <TaskList/>
       
     </>
   )
