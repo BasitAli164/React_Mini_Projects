@@ -1,48 +1,51 @@
-import React, { useState } from 'react';
-import AddTodo from './AddTodo';
-import TaskList from './TaskList';
+import React, { useState } from 'react'
+
 
 let nextId=4;
-const initailTodos=[
-  {id:0,title:'Tution',done:true},
-  {id:2,title:'Charging',done:true},
-  {id:3,title:'Practice',done:false},
+const initialTodo=[
+    {id:0,title:"Tution",done:true},
+    {id:1,title:"Charging",done:false},
+    {id:2,title:"Practice",done:false},
 ]
 
 const Todo = () => {
-  const [todos,setTodos]=useState(initailTodos)
-  const [check,setCheck]=useState(false)
-  console.log(todos)
+  const [todo,setTodo]=useState(initialTodo);
+  const [todoTitle,setTodoTittle]=useState("")
+  console.log("Todo is:",todo)
+
   const handleAddTodo=(title)=>{
+    console.log(title)
     const newArray=[
-      ...todos,
+      ...todo,
       {
         id:nextId++,
         title:title,
-        done:true,
+        done:false
       }
     ]
-    setTodos(newArray)
+    setTodo(newArray)
+    setTodoTittle('')
   }
-  const handleChangeTodo=(updateData)=>{
-    const updateTodo=todos.map((item)=>{
-      if(item.id===updateData.id) return updateData
-      else item
-    })
-    setTodos(updateData)
-  }
-  const handleDeleteTodo=(deleteId)=>{
-    const deleteItem=todos.filter((item)=>item.id!==deleteId)
-    setTodos(deleteItem)
-  }
-  
   return (
-    <div className='w-full h-screen flex justify-center flex-col items-center'>
-    <AddTodo onAddTodo={handleAddTodo}/>
-      <TaskList todos={todos} onChangeTodo={handleChangeTodo} onDeleteTodo={handleDeleteTodo}/>
-    
-      
+    <>
+    <section>
+    <div>
+      <input
+       type="text"
+       value={todoTitle}
+       onChange={(e)=>setTodoTittle(e.target.value)}
+       className='border-[2px] border-solid border-black focus:border-[1px] focus:outline-none'
+       />
+       <button 
+        className='px-8 py-1 mx-2 bg-orange-300 rounded-full '
+        onClick={()=>handleAddTodo(todoTitle)}
+        >Add</button>
     </div>
+      <div>
+        
+      </div>
+    </section>
+    </>
   )
 }
 
