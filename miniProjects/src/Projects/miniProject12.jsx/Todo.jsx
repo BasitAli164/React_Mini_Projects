@@ -11,10 +11,11 @@ const initailTodos=[
 
 const Todo = () => {
   const [todos,setTodos]=useState(initailTodos)
+  console.log(todos)
   return (
     <>
-    <AddTodo/>
-    <TaskList/>
+    <AddTodo onAddTodo={handleAddTodo}/>
+    <TaskList onChangeTodo={handleChangeTodo} onDeleteTodo={handleDeleteTodo}/>
       
     </>
   )
