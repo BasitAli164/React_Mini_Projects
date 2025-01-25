@@ -11,6 +11,7 @@ const Todo = () => {
   const [todo,setTodo]=useState(initialTodo);
   const [todoTitle,setTodoTittle]=useState("");
   const [isEditing,setIsEditing]=useState(false);
+  console.log(todo)
 
   const handleAddTodo=(title)=>{
     console.log(title)
@@ -29,9 +30,14 @@ const Todo = () => {
     console.log("The updata data is:",updateData)
     const newArray=todo.map((item)=>{
       if(item.id===updateData.id) return updateData
-      else item
+      else return  item
     })
     setTodo(newArray)
+  }
+  const handleDeleteTodo=(delId)=>{
+    console.log("the id:",delId)
+    const deletedArray=todo.filter((item)=>item.id!=delId)
+    setTodo(deletedArray)
   }
   return (
     <>
@@ -48,28 +54,47 @@ const Todo = () => {
         onClick={()=>handleAddTodo(todoTitle)}
         >Add</button>
     </div>
-      <div>
+     <div className='flex'>
+     <div>
         {
           todo.map((item)=>(
             <ul key={item.id}>
-               <input type="checkbox" value={item.done} onChange={(e)=>{
-                // console.log("item done is:",item.done)
-                handleChangeTodo([
-                  ...todo,
+               <input type="checkbox" checked={item.done} onChange={(e)=>{
+                handleChangeTodo(
                   {
                     id:item.id,
                     title:item.title,
                     done:e.target.checked
                   }
-                ])
+                )
 
                }}/>
-          <span>{item.title}</span>
+           
             </ul>
           ))
         }
              
       </div>
+      <div>
+        {
+          todo.map((item)=>(
+            <ul key={item.id}>
+              <span>{item.title}</span>
+              <button className='px-8 py-1 bg-cyan-300 rounded-full mx-2' onClick={(e)=>handleChangeTodo([
+                ...item,
+                {
+                  id:item.id,
+                  title:e.target.value,
+                  done:item.done
+                }
+              ])}>{isEditing?'Save':'Edit'}</button>
+              <button className='px-8 py-1 mx-3 rounded-full bg-cyan-300 ' onClick={()=>handleDeleteTodo(item.id)}>Delete</button>
+
+            </ul>
+          ))
+        }
+      </div>
+     </div>
     </section>
     </>
   )
