@@ -40,13 +40,34 @@ const Todo = () => {
     const deletedArray=todo.filter((item)=>item.id!=delId)
     setTodo(deletedArray)
   }
-  // if(isEditing){
-  //   return(
-  //     <>
-  //     <input className='border-[2px] border-black border-solid' type="text" value={todoTitle} onChange={(e)=>setTodoTittle(e.target.value)} />
-  //     </>
-  //   )
-  // }
+  let todoContent;
+  if(isEditing){
+   todoContent=(
+    <>
+    <input
+     type="text"
+     value={todo.title}
+     onChange={(e)=>handleChangeTodo({
+      ...todo,
+      title:e.target.value
+     })}
+     className='border-[2px] border-solid border-black'
+     />
+     <button className='px-8 py-1 mx-2 rounded-full bg-cyan-200' onClick={()=>setIsEditing(false)}>Save</button>
+
+    
+    </>
+   )
+  }
+  else{
+    todoContent=(
+      <>
+          {todo.title}
+          <button  className='px-8 py-1 mx-2 rounded-full bg-cyan-200' onClick={()=>setIsEditing(true)}>Edit</button>
+
+      </>
+    )
+  }
   return (
     <>
     <section>
@@ -88,25 +109,7 @@ const Todo = () => {
           todo.map((item)=>(
             <ul key={item.id}>
               <span>{item.title}</span>
-              {isEditing?<input className='border-[2px] border-solid border-black' type='text' value={item.title} onChange={(e)=>{
-                handleChangeTodo({
-                  ...todo,
-                  title:e.target.value
-                })
-              }}/>:''}
-
-              <button className='px-8 py-1 bg-cyan-300 rounded-full mx-2' onClick={(e)=>{handleChangeTodo([
-                ...todo,
-                {
-                  id:item.id,
-                  title:e.target.value,
-                  done:item.done
-                }
-              ])
-            setIsEditing(!isEditing)
-            }}
-              
-              >{isEditing?'Save':'Edit'}</button>
+             {todoContent}
               <button className='px-8 py-1 mx-3 rounded-full bg-cyan-300 ' onClick={()=>handleDeleteTodo(item.id)}>Delete</button>
 
             </ul>
