@@ -11,6 +11,7 @@ const initailTodos=[
 
 const Todo = () => {
   const [todos,setTodos]=useState(initailTodos)
+  const [check,setCheck]=useState(false)
   console.log(todos)
   const handleAddTodo=(title)=>{
     const newArray=[
@@ -32,12 +33,22 @@ const Todo = () => {
   }
   const handleDeleteTodo=(deleteId)=>{
     const deleteItem=todos.filter((item)=>item.id!==deleteId)
-    setTodos(deleteId)
+    setTodos(deleteItem)
   }
+  
   return (
     <>
     <AddTodo onAddTodo={handleAddTodo}/>
     <TaskList onChangeTodo={handleChangeTodo} onDeleteTodo={handleDeleteTodo}/>
+    <ul>
+      {
+        todos.map((item)=>(
+          <li key={item.id}>
+            <span>{item.title}</span>
+          </li>
+        ))
+      }
+    </ul>
       
     </>
   )
