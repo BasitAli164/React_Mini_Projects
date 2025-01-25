@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
 
 let nextId=4;
 const initialTodo=[
@@ -11,9 +10,7 @@ const initialTodo=[
 const Todo = () => {
   const [todo,setTodo]=useState(initialTodo);
   const [todoTitle,setTodoTittle]=useState("");
-  const [check,setCheck]=useState(false);
   const [isEditing,setIsEditing]=useState(false);
-  console.log("Todo is:",todo)
 
   const handleAddTodo=(title)=>{
     console.log(title)
@@ -27,6 +24,14 @@ const Todo = () => {
     ]
     setTodo(newArray)
     setTodoTittle('')
+  }
+  const handleChangeTodo=(updateData)=>{
+    console.log("The updata data is:",updateData)
+    const newArray=todo.map((item)=>{
+      if(item.id===updateData.id) return updateData
+      else item
+    })
+    setTodo(newArray)
   }
   return (
     <>
@@ -44,7 +49,26 @@ const Todo = () => {
         >Add</button>
     </div>
       <div>
+        {
+          todo.map((item)=>(
+            <ul key={item.id}>
+               <input type="checkbox" value={item.done} onChange={(e)=>{
+                // console.log("item done is:",item.done)
+                handleChangeTodo([
+                  ...todo,
+                  {
+                    id:item.id,
+                    title:item.title,
+                    done:e.target.checked
+                  }
+                ])
 
+               }}/>
+          <span>{item.title}</span>
+            </ul>
+          ))
+        }
+             
       </div>
     </section>
     </>
