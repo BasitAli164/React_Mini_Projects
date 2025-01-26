@@ -19,6 +19,12 @@ const reducer=(todo,action)=>{
       
     }
     case "updateTodo":{
+      return todo.map((item)=>{
+        item.id==action.payload.id?{
+          ...item,
+          title:action.payload.title
+        }:''
+      })
 
     }
     case 'deleteTodo':{
@@ -43,7 +49,8 @@ const reducer=(todo,action)=>{
 
 const Todo3 = () => {
     const [todo,dispatch]=useReducer(reducer,initialState)
-    const [title,setTitle]=useState('')
+    const [title,setTitle]=useState('');
+    const [isEditing,setIsEditing]=useState(false);
     console.log("the initail state is:",todo)
   return (
     <div>
@@ -60,7 +67,22 @@ const Todo3 = () => {
                 <span className={`${item.done?'line-through':''}`}>{item.title}</span>
               </div>
               <div>
-                <button className='mx-2 px-6 py-1 rounded-full bg-green-400'>Edit</button>
+               {
+                isEditing?(
+                  <>
+                  <button className='mx-2 px-6 py-1 rounded-full bg-yellow-400'onClick={()=>{
+                    setIsEditing(false)
+                  }} >Save</button>
+                  </>
+                ):(
+                  <>
+                  <button className='mx-2 px-6 py-1 rounded-full bg-yellow-400' onClick={()=>{
+                    // dispatch({type:'updateTodo',payload:{id:item.id,title:title}})
+                    setIsEditing(true)
+                  }}>Edit</button>
+                  </>
+                )
+               }
                 <button className='mx-2 px-6 py-1 rounded-full bg-red-400' onClick={()=>dispatch({type:'deleteTodo',payload:item.id})}>Delete</button>
               </div>
             </div>
