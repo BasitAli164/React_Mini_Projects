@@ -51,10 +51,14 @@ const Todo3 = () => {
       <div>
         {
           todo.map((item)=>(
-            <div key={item.id}>
+            <div className='flex justify-between gap-y-2' key={item.id}>
               <div>
                 <input type="checkbox" checked={item.done} onChange={(e)=>dispatch({type:'toggle',payload:{id:item.id,value:e.target.checked}})} />
                 <span className={`${item.done?'line-through':''}`}>{item.title}</span>
+              </div>
+              <div>
+                <button className='mx-2 px-6 py-1 rounded-full bg-green-400'>Edit</button>
+                <button className='mx-2 px-6 py-1 rounded-full bg-red-400' onClick={()=>}>Delete</button>
               </div>
             </div>
           ))
