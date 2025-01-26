@@ -30,6 +30,21 @@ const Todo2 = () => {
             <button className='px-6 py-1 mx-1 rounded-full bg-cyan-400' onClick={()=>handleAddTodo(todoTitle)}>Add</button>
 
         </div>
+        <div>
+            {
+                todo.map((item)=>(
+                    <>
+                    <div key={item.id}>
+                        
+
+
+                    </div>
+                    
+                    
+                    </>
+                ))
+            }
+        </div>
     </section>
       
     </>
