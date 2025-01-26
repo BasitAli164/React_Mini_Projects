@@ -34,7 +34,7 @@ const App = () => {
     {/* <Todo/> */}
     {/* <Todo2/> */}
     {/* <Todo3/> */}
-    <Project14/>
+    <Project14 userName={"Basit"}/>
 
 
     </>

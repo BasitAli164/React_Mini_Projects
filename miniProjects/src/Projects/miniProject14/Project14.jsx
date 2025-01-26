@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { act, useReducer } from 'react';
 const createInitialState=(userName)=>{
     const initialTodos=[];
     for(let i=0;i<=20;i++){
@@ -17,9 +17,20 @@ const createInitialState=(userName)=>{
 const reducer=(state,action)=>{
     switch(action.type){
         case 'changeDraft':{
+           return {
+            ...state,
+            draft:action.nextDraft,
+           }
             
         }
         case 'addTodo':{
+            return {
+                draft: '',
+                todos: [{
+                  id: state.todos.length,
+                  text: state.draft
+                }, ...state.todos]
+              }
             
         }
         default:{
@@ -29,6 +40,7 @@ const reducer=(state,action)=>{
 }
 const Project14 = ({userName}) => {
     const [state,dispatch]=useReducer(reducer,userName,createInitialState);
+    console.log(state.todos)
   return (
     <>
       <input type="text" value={state.draft} onChange={(e)=>dispatch({type:'changeDraft',nextDraft:e.target.value})} className='border-[2px] border-solid border-gray-500' />
