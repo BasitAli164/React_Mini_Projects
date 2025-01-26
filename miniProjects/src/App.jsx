@@ -13,6 +13,7 @@ import Project11 from './Projects/miniProject11/Project11'
 import Todo from './Projects/miniProject12/Todo'
 import Todo2 from './Projects/miniProject12/Todo2'
 import Todo3 from './Projects/miniProject13/Todo3'
+import Project14 from './Projects/miniProject14/Project14'
 
 
 const App = () => {
@@ -32,7 +33,8 @@ const App = () => {
     {/* <Project11/> */}
     {/* <Todo/> */}
     {/* <Todo2/> */}
-    <Todo3/>
+    {/* <Todo3/> */}
+    <Project14/>
 
 
     </>
