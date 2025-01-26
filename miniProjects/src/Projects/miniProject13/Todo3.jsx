@@ -27,7 +27,7 @@ const reducer=(todo,action)=>{
     case 'toggle':{
       return (
         todo.map((item)=>{
-          item.id==action.payload.id?{...item,done:action.payload.value}:item
+          return item.id==action.payload.id?{...item,done:action.payload.value}:item
         })
       )
 
