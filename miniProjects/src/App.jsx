@@ -11,6 +11,7 @@ import Counter from './Projects/miniProject9/Counter'
 import Profile from './Projects/miniProject10/Profile'
 import Project11 from './Projects/miniProject11/Project11'
 import Todo from './Projects/miniProject12.jsx/Todo'
+import Todo2 from './Projects/miniProject12.jsx/Todo2'
 
 
 const App = () => {
@@ -28,7 +29,8 @@ const App = () => {
     {/* <Counter/> */}
     {/* <Profile/> */}
     {/* <Project11/> */}
-    <Todo/>
+    {/* <Todo/> */}
+    <Todo2/>
 
 
     </>

@@ -7,7 +7,9 @@ const initialState=[
 ]
 
 const Todo2 = () => {
-    const [todo,setTodo]=useState(initialState)
+    const [todo,setTodo]=useState(initialState);
+    const [todoTitle,setTodoTitle]=useState('');
+    console.log(todo)
 
     const handleAddTodo=(title)=>{
         const newArray=[
@@ -24,7 +26,9 @@ const Todo2 = () => {
     <>
     <section>
         <div>
-            
+            <input className='border-[2px] border-solid border-black' type="text" value={todoTitle} onChange={(e)=>setTodoTitle(e.target.value)} />
+            <button className='px-6 py-1 mx-1 rounded-full bg-cyan-400' onClick={()=>handleAddTodo(todoTitle)}>Add</button>
+
         </div>
     </section>
       
