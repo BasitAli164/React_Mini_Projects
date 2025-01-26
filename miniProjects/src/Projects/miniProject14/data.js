@@ -3,7 +3,7 @@ export const initialState={
     selectedId:0,
     message:'Hi, I am a Gentleman'
 }
-export const reducer=(state,action)=>{
+export const messengerReducer=(state,action)=>{
     switch(action.type){
         case "changeSelection" :{
 
