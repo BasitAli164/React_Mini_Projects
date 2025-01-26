@@ -82,12 +82,16 @@ const Todo = () => {
                 <input
                   type="text"
                   value={item.title}
-                  onChange={(e) => handleUpdateTodo(item.id, e.target.value)}
+                  onChange={(e) =>
+                    handleUpdateTodo(item.id, e.target.value)
+                  }
                   className="border-[2px] border-solid border-black px-2 py-1"
                 />
               ) : (
                 <span
-                  className={`${item.done ? "line-through text-gray-400" : ""}`}
+                  className={`${
+                    item.done ? "line-through text-gray-400" : ""
+                  }`}
                 >
                   {item.title}
                 </span>
@@ -96,28 +100,29 @@ const Todo = () => {
 
             <div>
               {editingId === item.id ? (
-                <>
-                  <button
-                    className="px-4 py-1 mx-1 bg-green-400 rounded-full"
-                    onClick={() => handleUpdateTodo(item.id, item.title)} // Save changes here
-                  >
-                    Save
-                  </button>
-                  <button
-                    className="px-4 py-1 mx-1 bg-gray-300 rounded-full"
-                    onClick={() => setEditingId(null)} // Cancel editing
-                  >
-                    Cancel
-                  </button>
-                </>
-              ) : (
-                <button
-                  className="px-4 py-1 mx-1 bg-blue-400 rounded-full"
-                  onClick={() => setEditingId(item.id)} // Enable editing
-                >
-                  Edit
-                </button>
-              )}
+  <>
+    <button
+      className="px-4 py-1 mx-1 bg-green-400 rounded-full"
+      onClick={() => handleUpdateTodo(item.id, item.title)} // Save changes here
+    >
+      Save
+    </button>
+    <button
+      className="px-4 py-1 mx-1 bg-gray-300 rounded-full"
+      onClick={() => setEditingId(null)} // Cancel editing
+    >
+      Cancel
+    </button>
+  </>
+) : (
+  <button
+    className="px-4 py-1 mx-1 bg-blue-400 rounded-full"
+    onClick={() => setEditingId(item.id)} // Enable editing
+  >
+    Edit
+  </button>
+)}
+
 
               <button
                 className="px-4 py-1 mx-1 bg-red-400 rounded-full"
