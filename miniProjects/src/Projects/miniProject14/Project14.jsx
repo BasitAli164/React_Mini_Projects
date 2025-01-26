@@ -27,7 +27,7 @@ const reducer=(state,action)=>{
         }
     }
 }
-const Project14 = () => {
+const Project14 = ({userName}) => {
     const [state,dispatch]=useReducer(reducer,userName,createInitialState);
   return (
     <>
