@@ -24,9 +24,8 @@ const Todo2 = () => {
         setTodoTitle("")
     }
     const handleToggleDone=(id,value)=>{
-        const newArray=todo.map((item)=>{
-            item.id===id?value:item
-        })
+        const newArray=todo.map((item)=>item.id===id?{...item,done:value}:item
+        )
         setTodo(newArray)
     }
   return (
@@ -43,9 +42,7 @@ const Todo2 = () => {
                     <>
                     <div key={item.id}>
                         <div>
-                            <input type="checkbox" checked={item.done} onChange={(e)=>{
-                                setTodo(todo.map((item)=>item.id))
-                            }}  />
+                            <input type="checkbox" checked={item.done} onChange={(e)=>handleToggleDone(item.id,e.target.checked)}  />
                             <span className={`${item.done?'line-through':''}`}>{item.title}</span>
                         </div>
                         <div></div>
