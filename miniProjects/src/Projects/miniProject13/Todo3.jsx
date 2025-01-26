@@ -22,6 +22,9 @@ const reducer=(todo,action)=>{
 
     }
     case 'deleteTodo':{
+      return todo.filter((item)=>item.id!==action.payload)
+
+      
 
     }
     case 'toggle':{
@@ -58,7 +61,7 @@ const Todo3 = () => {
               </div>
               <div>
                 <button className='mx-2 px-6 py-1 rounded-full bg-green-400'>Edit</button>
-                <button className='mx-2 px-6 py-1 rounded-full bg-red-400' onClick={()=>}>Delete</button>
+                <button className='mx-2 px-6 py-1 rounded-full bg-red-400' onClick={()=>dispatch({type:'deleteTodo',payload:item.id})}>Delete</button>
               </div>
             </div>
           ))
