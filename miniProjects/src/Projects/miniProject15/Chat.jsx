@@ -13,7 +13,7 @@ const Chat = ({contact,message,dispatch}) => {
         }}
         ></textarea>
         <br />
-        <button className='px-4 py-1 my-2 rounded-full bg-cyan-400'>Send to {contact.email}</button>
+        <button className='px-4 py-1 my-2 rounded-full bg-cyan-400' onClick={()=>dispatch({type:'handleClick',name:contact.name,email:contact.email,message:''})}>Send to {contact.email}</button>
     </section>
       
     </>

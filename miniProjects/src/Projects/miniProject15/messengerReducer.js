@@ -23,7 +23,7 @@ export function messangerReducer(state,action){
             return{
                 ...state,
                 message:action.message,
-                func:alert(`Message:${action.message} Send By: ${action.email}`),
+                func:alert(`Send By:${action.name}\n Email: ${action.email}`),
             }
         }
         default:{
