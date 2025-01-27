@@ -19,6 +19,13 @@ export function messangerReducer(state,action){
             }
 
         }
+        case 'handleClick':{
+            return{
+                ...state,
+                message:action.message,
+                func:alert(`Message:${action.message} Send By: ${action.email}`),
+            }
+        }
         default:{
             throw Error(`Unknown action ${action.type}`)
         }
