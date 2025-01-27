@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useTheme } from "../miniProject18/ThemeContext";
 
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const {theme}=useTheme
   const handleSubmit = (e) => {
     e.preventDefault();
     setUserName("");
