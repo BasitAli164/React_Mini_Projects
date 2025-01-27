@@ -21,7 +21,12 @@ const Project15 = () => {
     selectedId={state.selectedId}
     dispatch={dispatch}
     />
-    <Chat/>
+    <Chat
+    key={contact.id}
+    message={message}
+    contact={contact}
+    dispatch={dispatch}
+    />
       
     </>
   )

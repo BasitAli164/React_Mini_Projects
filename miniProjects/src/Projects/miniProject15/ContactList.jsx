@@ -10,7 +10,7 @@ const ContactList = ({contacts,selectedId,dispatch}) => {
                 contacts.map((item)=>(
                     <li key={item.id}>
                         <button onClick={()=>{
-                            dispatch({type:''})
+                            dispatch({type:'changeSelection',contactId:item.id})
                         }}>
                         {selectedId===item.id?<b>{item.name}</b>:item.name}
                         </button>
