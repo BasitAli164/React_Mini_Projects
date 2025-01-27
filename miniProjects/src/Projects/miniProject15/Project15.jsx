@@ -7,7 +7,7 @@ const contacts=[
     {id:0,name:"Basit Ali",email:"Apoali911@gmail.com"},
     {id:1,name:"Sakina Ali",email:"sakina@gmail.com"},
     {id:2,name:"Khatija Ali",email:"khatija@gmail.com"},
-d    
+   
 ]
 
 const Project15 = () => {
