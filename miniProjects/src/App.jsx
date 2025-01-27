@@ -47,9 +47,10 @@ const App = () => {
       {/* <CounterProvider2>
         <CounterApp />
       </CounterProvider2> */}
-      <ThemeProvider>
+      {/* <ThemeProvider>
         <BackGroundChanger/>
-      </ThemeProvider>
+      </ThemeProvider> */}
+      
     </>
   );
 };
