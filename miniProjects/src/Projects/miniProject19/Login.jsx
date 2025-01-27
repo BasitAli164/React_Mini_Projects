@@ -13,7 +13,7 @@ const Login = () => {
   return (
     <div>
       <form
-        className="flex flex-col justify-center items-center"
+        className="flex flex-col justify-center items-center gap-2"
         onSubmit={handleSubmit}
       >
         <div>
