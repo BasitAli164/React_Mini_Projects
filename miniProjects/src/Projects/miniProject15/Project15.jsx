@@ -16,7 +16,8 @@ const Project15 = () => {
     const contact=contacts.find((item)=>item.id===state.selectedId)
   return (
     <>
-    <ContactList
+   <section className='flex gap-2'>
+   <ContactList
     contacts={contacts}
     selectedId={state.selectedId}
     dispatch={dispatch}
@@ -27,6 +28,7 @@ const Project15 = () => {
     contact={contact}
     dispatch={dispatch}
     />
+   </section>
       
     </>
   )
