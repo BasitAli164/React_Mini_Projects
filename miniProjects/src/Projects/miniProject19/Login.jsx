@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useTheme } from "../miniProject18/ThemeContext";
+import { useTheme } from "./ThemContext";
 
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {theme}=useTheme()
+  const {theme,setTheme}=useTheme()
   const handleSubmit = (e) => {
     e.preventDefault();
     setUserName("");
@@ -13,8 +13,8 @@ const Login = () => {
     setPassword("");
   };
   return (
-    <>
-      <div className="border-[3px] border-black border-solid">
+    <div className="flex flex-col justify-center items-center">
+      <div className={`border-[3px] border-black border-solid  bg-[${theme}]`}>
       <form
         className="flex flex-col justify-center items-center gap-2"
         onSubmit={handleSubmit}
@@ -59,8 +59,9 @@ const Login = () => {
       </form>
       </div>
       <br /><br />
-      <input type="checkbox" checked={theme} />
-    </>
+      <input type="checkbox" checked={theme==="#000"}  onChange={(e)=>setTheme(e.target.checked?"#000":'#fff')}/>
+      Use Dark Mode
+    </div>
   );
 };
 
