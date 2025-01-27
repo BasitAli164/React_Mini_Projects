@@ -11,6 +11,8 @@ const Chat = ({contact,message,dispatch}) => {
             dispatch({type:'editMessage',message:e.target.value})
         }}
         ></textarea>
+        <br />
+        <button>Send to {contact.email}</button>
     </section>
       
     </>
