@@ -3,8 +3,9 @@ import React from 'react'
 const Chat = ({contact,message,dispatch}) => {
   return (
     <>
-    <section>
+    <section className='text-center'>
         <textarea
+        className='w-72 h-40 placeholder:text-white placeholder:text-xl border-[2px] border-gray-500 border-dotted'
         value={message}
         placeholder={`Chat to ${contact.name}`}
         onChange={(e)=>{
@@ -12,7 +13,7 @@ const Chat = ({contact,message,dispatch}) => {
         }}
         ></textarea>
         <br />
-        <button>Send to {contact.email}</button>
+        <button className='px-4 py-1 my-2 rounded-full bg-cyan-400'>Send to {contact.email}</button>
     </section>
       
     </>
