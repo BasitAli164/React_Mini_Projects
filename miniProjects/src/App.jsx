@@ -21,6 +21,8 @@ import { CounterProvider2 } from "./Projects/miniProject17/CounterContext";
 import CounterApp from "./Projects/miniProject17/CounterApp";
 import { ThemeProvider } from "./Projects/miniProject18/ThemeContext";
 import BackGroundChanger from "./Projects/miniProject18/BackGroundChanger";
+import { ThemeProviders } from "./Projects/miniProject19/ThemContext";
+import Login from "./Projects/miniProject19/Login";
 
 const App = () => {
   return (
@@ -50,7 +52,10 @@ const App = () => {
       {/* <ThemeProvider>
         <BackGroundChanger/>
       </ThemeProvider> */}
-      
+      <ThemeProviders>
+        <Login/>
+      </ThemeProviders>
+
     </>
   );
 };
