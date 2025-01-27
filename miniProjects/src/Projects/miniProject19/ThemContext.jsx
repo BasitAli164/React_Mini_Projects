@@ -10,3 +10,7 @@ export const ThemeProvider=({children})=>{
         </themeContext.Provider>
           )
 }
+
+export const useTheme=()=>{
+    return useContext(themeContext)
+}
