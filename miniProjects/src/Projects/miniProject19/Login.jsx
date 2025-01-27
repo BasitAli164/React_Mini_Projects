@@ -5,7 +5,7 @@ const Login = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {theme}=useTheme
+  const {theme}=useTheme()
   const handleSubmit = (e) => {
     e.preventDefault();
     setUserName("");
@@ -13,7 +13,8 @@ const Login = () => {
     setPassword("");
   };
   return (
-    <div>
+    <>
+      <div className="border-[3px] border-black border-solid">
       <form
         className="flex flex-col justify-center items-center gap-2"
         onSubmit={handleSubmit}
@@ -56,7 +57,10 @@ const Login = () => {
           value="Submit"
         />
       </form>
-    </div>
+      </div>
+      <br /><br />
+      <input type="checkbox" checked={theme} />
+    </>
   );
 };
 
