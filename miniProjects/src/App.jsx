@@ -18,7 +18,6 @@ import Project15 from './Projects/miniProject15/Project15'
 
 
 const App = () => {
-  console.log("parente")
   return (
     <>
     {/* <CustomeSlider/> */}

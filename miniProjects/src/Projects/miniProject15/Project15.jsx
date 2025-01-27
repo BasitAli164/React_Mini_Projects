@@ -12,9 +12,7 @@ const contacts=[
 
 const Project15 = () => {
     const [state,dispatch]=useReducer(messangerReducer,initialState);
-    console.log(state)
-    const message=state.message;
-    console.log("message:",message)
+    const message=state.message[state.selectedId];
     const contact=contacts.find((item)=>item.id===state.selectedId)
   return (
     <>

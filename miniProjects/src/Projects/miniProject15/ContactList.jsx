@@ -1,6 +1,7 @@
 import React from 'react'
 
 const ContactList = ({contacts,selectedId,dispatch}) => {
+    console.log(selectedId)
 
   return (
     <>

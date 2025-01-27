@@ -1,21 +1,28 @@
 export const initialState={
     selectedId:0,
-    message:'Hellow'
+    message:{
+        0:'Hello Basit',
+        1:'Hello Sakina',
+        2:'Hello Khatija'
+    }
 }
 export function messangerReducer(state,action){
+    console.log(state)
     switch(action.type){
         case 'changeSelection':{
             return {
                 ...state,
-                selectedId:action.contactId,
-                message:'',
+               selectedId:action.contactId
             }
 
         }
         case 'editMessage':{
             return{
                 ...state,
-                message:action.message
+                message:{
+                    ...state.message,
+                    [state.selectedId]:''
+                }
             }
 
         }
