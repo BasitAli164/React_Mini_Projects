@@ -44,7 +44,7 @@ function Tasks({ task }) {
         />
         <button
           onClick={() => setIsEditing(false)}
-          className="mx-2 px-8 py-2 rounded-full bg-yellow-300"
+          className="mx-2 px-8 py-2 rounded-full bg-yellow-500"
         >
           Save
         </button>
@@ -56,7 +56,7 @@ function Tasks({ task }) {
         {task.text}
         <button
           onClick={() => setIsEditing(true)}
-          className="px-8 py-2 mx-2 rounded-full bg-cyan-300"
+          className="px-8 py-2 mx-2 rounded-full bg-orange-500"
         >
           Edit
         </button>
