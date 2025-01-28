@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTasksContext } from './Projects/miniProject21/TaskContext'
 
 const TaskList = () => {
@@ -9,6 +9,7 @@ const TaskList = () => {
         {
             tasks.map((item)=>(
                 <li key={item.id}>
+                    <Tasks task={item}/>
 
                 </li>
             ))
@@ -20,3 +21,8 @@ const TaskList = () => {
 }
 
 export default TaskList
+
+function Tasks({task}){
+    const [isEditing,setIsEditing]=useState(false)
+
+}
