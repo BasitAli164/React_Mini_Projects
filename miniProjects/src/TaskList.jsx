@@ -68,7 +68,17 @@ function Tasks({task}){
         <label>
         <input 
         type="checkbox"
-        
+        checked={task.done}
+        onChange={e=>{
+            dispatch({
+                type:'changed',
+                task:{
+                    ...task,
+                    
+                }
+            })
+        }}
+
          />
         </label>
         </>
