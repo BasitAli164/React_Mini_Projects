@@ -5,7 +5,7 @@ const AddTask = () => {
   const [text, setText] = useState("");
   const dispatch = useDispatchContext();
   return (
-    <>
+    <div className="flex">
       <input
         type="text"
         placeholder="Add task"
@@ -26,7 +26,7 @@ const AddTask = () => {
       >
         Add
       </button>
-    </>
+    </div>
   );
 };
 
