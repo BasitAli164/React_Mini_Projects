@@ -83,7 +83,16 @@ function Tasks({task}){
 
          />
         {taskContent}
+        <button
+        onClick={()=>{
+            dispatch({
+                type:'deleted',
+                id:task.id
+            })
+        }}
+        >Delete</button>
         </label>
+       
         </>
 
     )
