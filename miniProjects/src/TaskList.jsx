@@ -27,7 +27,25 @@ function Tasks({task}){
     const dispatch=useDispatchContext();
     let taskContent;
     if(isEditing){
-        
+        taskContent=(
+            <>
+            <input
+             type="text"
+             value={task.text}
+             onChange={e=>{
+                dispatch({
+                    type:'changed',
+                    task:{
+                        ...task,
+                        text:e.target.value
+                    }
+                })
+             }}
+             />
+            
+            </>
+        )
+
     }
 
 }
