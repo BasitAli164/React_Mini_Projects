@@ -43,11 +43,36 @@ function Tasks({task}){
              }}
              className='bordre-[3px] border-solid border-black '
              />
-             <button onClick={()=>setIsEditing(false)}>Save</button>
+             <button
+              onClick={()=>setIsEditing(false)}
+              className='mx-2 px-8 py-2 rounded-full bg-yellow-300'
+              >Save</button>
             
             </>
         )
 
+    }else{
+        taskContent=(
+            <>
+            {task.text}
+            <button
+            onClick={()=>setIsEditing(true)}
+            className='px-8 py-2 mx-2 rounded-full bg-cyan-300'
+            >Edit</button>
+            </>
+        )
     }
+
+    return(
+        <>
+        <label>
+        <input 
+        type="checkbox"
+        
+         />
+        </label>
+        </>
+
+    )
 
 }
