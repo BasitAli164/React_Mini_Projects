@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatchContext } from "./TaskContext";
-let nextId=2;
+let nextId = 2;
 const AddTask = () => {
   const [text, setText] = useState("");
   const dispatch = useDispatchContext();

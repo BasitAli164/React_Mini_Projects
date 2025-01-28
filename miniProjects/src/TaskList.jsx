@@ -79,7 +79,7 @@ function Tasks({ task }) {
               },
             });
           }}
-          className="border-[3px] border-black border-solid"
+          className="border-[3px] border-black border-solid my-2"
         />
         {taskContent}
         <button
@@ -89,7 +89,7 @@ function Tasks({ task }) {
               id: task.id,
             });
           }}
-          className="px-8 py-2 mx-2 rounded-full bg-red-500"
+          className="px-8 py-2 mx-2 rounded-full bg-red-500 my-2"
         >
           Delete
         </button>
