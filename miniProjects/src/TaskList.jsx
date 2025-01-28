@@ -41,7 +41,9 @@ function Tasks({task}){
                     }
                 })
              }}
+             className='bordre-[3px] border-solid border-black '
              />
+             <button onClick={()=>setIsEditing(false)}>Save</button>
             
             </>
         )
