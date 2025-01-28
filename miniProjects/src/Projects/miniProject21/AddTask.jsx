@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatchContext } from "./TaskContext";
-import { nextId } from "./reducer&initailState";
-
+let nextId=2;
 const AddTask = () => {
   const [text, setText] = useState("");
   const dispatch = useDispatchContext();
