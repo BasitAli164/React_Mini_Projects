@@ -74,12 +74,15 @@ function Tasks({task}){
                 type:'changed',
                 task:{
                     ...task,
-                    
+                    done:e.target.checked
+
                 }
             })
         }}
+        className='border-[3px] border-black border-solid'
 
          />
+        {taskContent}
         </label>
         </>
 
