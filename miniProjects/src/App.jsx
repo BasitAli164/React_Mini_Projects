@@ -24,6 +24,7 @@ import BackGroundChanger from "./Projects/miniProject18/BackGroundChanger";
 import { ThemeProviders } from "./Projects/miniProject19/ThemContext";
 import Login from "./Projects/miniProject19/Login";
 import MyApp from "./Projects/miniProject20/Project20";
+import Task from "./Projects/miniProject21/Task";
 
 const App = () => {
   return (
@@ -57,6 +58,7 @@ const App = () => {
         <Login/>
       </ThemeProviders> */}
       {/* <MyApp/> */}
+      <Task/>
 
     </>
   );
