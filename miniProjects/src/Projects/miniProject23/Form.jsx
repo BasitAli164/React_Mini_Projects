@@ -21,6 +21,10 @@ const Form = () => {
             <label>password:</label>
             <input type="password" />
         </div>
+        <div>
+            <button>Login</button>
+            <button>Sign Up</button>
+        </div>
 
     </form>
       
