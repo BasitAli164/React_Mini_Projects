@@ -26,10 +26,12 @@ import Login from "./Projects/miniProject19/Login";
 import MyApp from "./Projects/miniProject20/Project20";
 import Task from "./Projects/miniProject21/Task";
 import AddToCartForm from "./Projects/miniProject22/AddToCartForm";
+import Form from "./Projects/miniProject23/Form";
 
 const App = () => {
   return (
     <>
+    <div>
       {/* <CustomeSlider/> */}
       {/* <FeedbackSystem/> */}
       {/* <TextColorChanger/> */}
@@ -60,8 +62,13 @@ const App = () => {
       </ThemeProviders> */}
       {/* <MyApp/> */}
       {/* <Task /> */}
-      <AddToCartForm itemID="1" itemTitle="JavaScript: The Definitive Guide" />
-      <AddToCartForm itemID="2" itemTitle="JavaScript: The Good Parts" />
+      {/* <AddToCartForm itemID="1" itemTitle="JavaScript: The Definitive Guide" />
+      <AddToCartForm itemID="2" itemTitle="JavaScript: The Good Parts" /> */}
+    </div>
+    <div>
+      <Form/>
+    </div>
+    
     </>
   );
 };
