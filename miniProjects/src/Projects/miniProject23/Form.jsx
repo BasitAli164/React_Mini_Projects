@@ -6,7 +6,7 @@ const Form = () => {
 
     }
   return (
-    <>
+    <div>
     <h1>{toggle?'Sign Up':'Login'} Form</h1>
     <form onSubmit={handleSubmit}>
         <div>
@@ -28,7 +28,7 @@ const Form = () => {
 
     </form>
       
-    </>
+    </div>
   )
 }
 
