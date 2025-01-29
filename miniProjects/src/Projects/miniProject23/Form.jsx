@@ -2,29 +2,42 @@ import React, { useState } from 'react'
 
 const Form = () => {
     const [toggle,setToggle]=useState(false);
-    const handleSubmit=()=>{
+    const [data,setData]=useState({
+        userName:'',
+        email:'',
+        password:''
+    });
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        setData({
+            ...data,
+            [e.target.name]:[e.target.value]
+        })
 
+    }
+    const handleToggle=()=>{
+        setToggle(!toggle)
     }
   return (
     <div className='w-screen h-screen flex flex-col justify-center items-center gap-2'>
     <h1 className='text-3xl font-bold '>{toggle?'Sign Up':'Login'} Form</h1>
-    <hr className='bg-white w-40' />
-    <form onSubmit={handleSubmit}>
-        <div>
-            <label>userName:</label>
-            <input type="text" />
-        </div>
-        <div>
+    <hr className='bg-white w-32' />
+    <form onSubmit={handleSubmit} className='flex flex-col'>
+       <div className='flex gap-4'>
+       <div className='flex flex-col gap-y-4'>
+            <label>username:</label>
             <label>email:</label>
-            <input type="email" />
-        </div>
-        <div>
             <label>password:</label>
+        </div>
+        <div className='flex flex-col gap-y-4'>
+            <input type="text" />
+            <input type="email" />
             <input type="password" />
         </div>
-        <div>
-            <button>Login</button>
-            <button>Sign Up</button>
+       </div>
+        <div className='flex justify-center items-center gap-4'>
+            <button onClick={handleToggle} className='px-7 py-2 rounded-full bg-cyan-500 font-bold my-5'>Login</button>
+            <button onClick={handleToggle} className='px-7 py-2 rounded-full bg-cyan-500 font-bold my-5'>Sign Up</button>
         </div>
 
     </form>
