@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 const Form = () => {
   const [toggle, setToggle] = useState(false);
   const [data, setData] = useState({
