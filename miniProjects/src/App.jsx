@@ -25,6 +25,7 @@ import { ThemeProviders } from "./Projects/miniProject19/ThemContext";
 import Login from "./Projects/miniProject19/Login";
 import MyApp from "./Projects/miniProject20/Project20";
 import Task from "./Projects/miniProject21/Task";
+import AddToCartForm from "./Projects/miniProject22/AddToCartForm";
 
 const App = () => {
   return (
@@ -58,7 +59,9 @@ const App = () => {
         <Login/>
       </ThemeProviders> */}
       {/* <MyApp/> */}
-      <Task />
+      {/* <Task /> */}
+      <AddToCartForm itemID="1" itemTitle="JavaScript: The Definitive Guide" />
+      <AddToCartForm itemID="2" itemTitle="JavaScript: The Good Parts" />
     </>
   );
 };
