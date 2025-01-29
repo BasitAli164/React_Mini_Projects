@@ -6,8 +6,9 @@ const Form = () => {
 
     }
   return (
-    <div>
-    <h1>{toggle?'Sign Up':'Login'} Form</h1>
+    <div className='w-screen h-screen flex flex-col justify-center items-center gap-2'>
+    <h1 className='text-3xl font-bold '>{toggle?'Sign Up':'Login'} Form</h1>
+    <hr className='bg-white w-40' />
     <form onSubmit={handleSubmit}>
         <div>
             <label>userName:</label>
