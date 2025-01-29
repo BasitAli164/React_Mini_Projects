@@ -13,10 +13,17 @@ const Form = () => {
             ...data,
             [e.target.name]:[e.target.value]
         })
+        
 
     }
     const handleToggle=()=>{
         setToggle(!toggle)
+        setData({
+            userName:'',
+            email:'',
+            password:''
+            
+        })
     }
   return (
     <div className='w-screen h-screen flex flex-col justify-center items-center gap-2'>
@@ -30,9 +37,9 @@ const Form = () => {
             <label>password:</label>
         </div>
         <div className='flex flex-col gap-y-4'>
-            <input type="text" />
-            <input type="email" />
-            <input type="password" />
+            <input type="text" value={data.userName} onChange={(e)=>setData(e.target.value)}/>
+            <input type="email" value={data.email} onChange={(e)=>setData(e.target.value)} />
+            <input type="password" value={data.userName} onChange={e=>setData(e.target.value)} />
         </div>
        </div>
         <div className='flex justify-center items-center gap-4'>
