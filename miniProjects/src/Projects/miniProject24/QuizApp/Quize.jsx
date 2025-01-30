@@ -3,9 +3,10 @@ import './Quize.css'
 
 const Quize = () => {
   return (
-    <>
+    <div className='container'>
+
       
-    </>
+    </div>
   )
 }
 
