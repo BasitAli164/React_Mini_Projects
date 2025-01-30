@@ -27,6 +27,7 @@ import MyApp from "./Projects/miniProject20/Project20";
 import Task from "./Projects/miniProject21/Task";
 import AddToCartForm from "./Projects/miniProject22/AddToCartForm";
 import Form from "./Projects/miniProject23/Form";
+import Quize from "./Projects/miniProject24/QuizApp/Quize";
 
 const App = () => {
   return (
@@ -66,7 +67,8 @@ const App = () => {
       <AddToCartForm itemID="2" itemTitle="JavaScript: The Good Parts" /> */}
     </div>
     <div>
-      <Form/>
+      {/* <Form/> */}
+      <Quize/>
     </div>
     
     </>
