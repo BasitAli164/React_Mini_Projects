@@ -66,7 +66,7 @@ const App = () => {
       {/* <AddToCartForm itemID="1" itemTitle="JavaScript: The Definitive Guide" />
       <AddToCartForm itemID="2" itemTitle="JavaScript: The Good Parts" /> */}
     </div>
-    <div>
+    <div className="h-screen w-full bg-[#5b469f] flex justify-center items-center">
       {/* <Form/> */}
       <Quize/>
     </div>
