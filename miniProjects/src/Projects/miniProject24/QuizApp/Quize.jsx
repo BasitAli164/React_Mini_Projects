@@ -2,7 +2,7 @@ import React from 'react'
 
 const Quize = () => {
   return (
-    <div className=''>
+    <div className='w-[640px] m-auto mt-[150px] bg-white color-[#262626] flex flex-col gap-[20px] rounded-[10px] py-[40px] px-[50px]'>
         <h1>Quize App</h1>
         <hr />
         <h2>Which Device is required for the Internet connection?</h2>
