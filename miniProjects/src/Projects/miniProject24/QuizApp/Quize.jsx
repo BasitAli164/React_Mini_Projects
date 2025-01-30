@@ -6,7 +6,13 @@ const Quize = () => {
     <div className='container'>
         <h1>Quize App</h1>
         <hr />
-        <h2></h2>
+        <h2>Which Device is required for the Internet connection?</h2>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
 
       
     </div>
