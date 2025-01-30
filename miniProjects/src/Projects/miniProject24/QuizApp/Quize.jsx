@@ -1,10 +1,11 @@
 import React from 'react'
+import './Quize.css'
 
 const Quize = () => {
   return (
-    <div>
+    <>
       
-    </div>
+    </>
   )
 }
 
