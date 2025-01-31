@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { data } from "./Data";
+import './Quize.css'
 
 const Quize = () => {
     const [index,setIndex]=useState(0);
     const [question,setQuestion]=useState(data[index])
     const checkAns=(e,ans)=>{
       if(question.ans==ans){
-        e.target.classList.add("correct")
+        e.target.classList.add("correct");
       }else{
-        e.target.classList.add("wrong")
+        e.target.classList.add("wrong");
       }
     }
   return (
@@ -19,16 +20,16 @@ const Quize = () => {
         {index+1}. {question.question}
       </h2>
       <ul className="mt-5">
-        <li className="flex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer">
+        <li className="flex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer" onClick={(e)=>{checkAns(e,1)}}>
           {question.option1}
         </li>
-        <li className="flsex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer">
+        <li className="flsex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer" onClick={(e)=>{checkAns(e,2)}}>
           {question.option2}
         </li>
-        <li className="flex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer">
+        <li className="flex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer" onClick={(e)=>{checkAns(e,3)}}>
           {question.option3}
         </li>
-        <li className="flex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer">
+        <li className="flex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer" onClick={(e)=>{checkAns(e,4)}}>
           {question.option4}
         </li>
       </ul>

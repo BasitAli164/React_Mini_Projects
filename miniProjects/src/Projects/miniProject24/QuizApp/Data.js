@@ -29,7 +29,7 @@ export const data = [
       option2: "CSS",
       option3: "Python",
       option4: "HTTP",
-      ans: 3,
+      ans: 4,
     },
     {
       question: "What does RAM stand for?",
