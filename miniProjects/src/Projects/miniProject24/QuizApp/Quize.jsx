@@ -4,6 +4,13 @@ import { data } from "./Data";
 const Quize = () => {
     const [index,setIndex]=useState(0);
     const [question,setQuestion]=useState(data[index])
+    const checkAns=(e,ans)=>{
+      if(question.ans==ans){
+        e.target.classList.add("correct")
+      }else{
+        e.target.classList.add("wrong")
+      }
+    }
   return (
     <div className="w-[640px] m-auto  bg-white text-[#262626] flex flex-col rounded-[10px] py-[40px] px-[50px]">
       <h1 className="text-xl mb-1 font-bold">Quize App</h1>
@@ -15,7 +22,7 @@ const Quize = () => {
         <li className="flex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer">
           {question.option1}
         </li>
-        <li className="flex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer">
+        <li className="flsex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer">
           {question.option2}
         </li>
         <li className="flex  items-center h-[50px] pl-[20px] border border-solid border-[#686868] rounded-[8px] mb-[15px] text-[20px] cursor-pointer">
