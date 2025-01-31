@@ -5,7 +5,7 @@ const Quize = () => {
     <div className='w-[640px] m-auto  bg-white text-[#262626] flex flex-col rounded-[10px] py-[40px] px-[50px]'>
         <h1>Quize App</h1>
         <hr className='h-[2px] border-none bg-[#707070]' />
-        <h2>Which Device is required for the Internet connection?</h2>
+        <h2 className='text-[27px] font-semibold '>Which Device is required for the Internet connection?</h2>
         <ul>
             <li>Modem</li>
             <li>Router</li>
