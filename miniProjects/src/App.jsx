@@ -15,6 +15,7 @@ import Todo2 from './Projects/miniProject12/Todo2'
 import Todo3 from './Projects/miniProject13/Todo3'
 import Project14 from './Projects/miniProject14/Project14'
 import Project15 from './Projects/miniProject15/Project15'
+import CounterProvider from './Projects/miniProject16/CounterProvider'
 
 
 const App = () => {
@@ -35,7 +36,10 @@ const App = () => {
     {/* <Todo2/> */}
     {/* <Todo3/> */}
     {/* <Project14 userName={"Basit"}/> */}
-    <Project15/>
+    {/* <Project15/> */}
+    <CounterProvider>
+      <Counter/>
+    </CounterProvider>
 
 
     </>

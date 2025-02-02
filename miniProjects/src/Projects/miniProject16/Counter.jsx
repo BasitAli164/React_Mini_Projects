@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { counterContext } from './counterContext'
 
-const Counter = () => {
+const CounterExample = () => {
     const {count, increment,decrement}=useContext(counterContext)
   return (
     <div>
@@ -13,4 +13,4 @@ const Counter = () => {
   )
 }
 
-export default Counter
+export default CounterExample
