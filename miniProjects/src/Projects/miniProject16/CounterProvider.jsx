@@ -10,7 +10,7 @@ const CounterProvider = () => {
         setCount(count-1)
     }
   return (
-    <counterContext.Provider value={{count,increment,decrement}}>
+    <counterContext.Provider value={[count,increment,decrement]}>
         {Children}
       
     </counterContext.Provider>

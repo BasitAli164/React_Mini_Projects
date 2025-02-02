@@ -16,6 +16,7 @@ import Todo3 from './Projects/miniProject13/Todo3'
 import Project14 from './Projects/miniProject14/Project14'
 import Project15 from './Projects/miniProject15/Project15'
 import CounterProvider from './Projects/miniProject16/CounterProvider'
+import CounterExample from './Projects/miniProject16/Counter'
 
 
 const App = () => {
@@ -38,7 +39,7 @@ const App = () => {
     {/* <Project14 userName={"Basit"}/> */}
     {/* <Project15/> */}
     <CounterProvider>
-      <Counter/>
+      <CounterExample/>
     </CounterProvider>
 
 
