@@ -17,6 +17,8 @@ import Project14 from "./Projects/miniProject14/Project14";
 import Project15 from "./Projects/miniProject15/Project15";
 import CounterProvider from "./Projects/miniProject16/CounterProvider";
 import CounterExample from "./Projects/miniProject16/Counter";
+import { CounterProvider2 } from "./Projects/miniProject17/CounterContext";
+import CounterApp from "./Projects/miniProject17/CounterApp";
 
 const App = () => {
   return (
@@ -37,9 +39,12 @@ const App = () => {
       {/* <Todo3/> */}
       {/* <Project14 userName={"Basit"}/> */}
       {/* <Project15/> */}
-      <CounterProvider>
+      {/* <CounterProvider>
         <CounterExample />
-      </CounterProvider>
+      </CounterProvider> */}
+      <CounterProvider2>
+        <CounterApp/>
+      </CounterProvider2>
     </>
   );
 };
