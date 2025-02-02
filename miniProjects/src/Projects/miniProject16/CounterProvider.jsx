@@ -10,9 +10,10 @@ const CounterProvider = () => {
         setCount(count-1)
     }
   return (
-    <div>
+    <counterContext.Provider value={{count,increment,decrement}}>
+        {}
       
-    </div>
+    </counterContext.Provider>
   )
 }
 
