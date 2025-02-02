@@ -6,7 +6,7 @@ const CounterExample = () => {
   return (
     <div>
         <button onClick={increment} className='mx-3 py-1 px-8 bg-cyan-600 rounded-full'>+</button>
-        <span>{count}</span>
+        <span className='text-white'>{count}</span>
         <button onClick={decrement} className='mx-3 py-1 px-8 bg-cyan-600 rounded-full'>-</button>
       
     </div>
