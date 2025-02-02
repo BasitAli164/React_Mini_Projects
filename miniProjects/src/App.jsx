@@ -43,7 +43,7 @@ const App = () => {
         <CounterExample />
       </CounterProvider> */}
       <CounterProvider2>
-        <CounterApp/>
+        <CounterApp />
       </CounterProvider2>
     </>
   );
