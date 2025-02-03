@@ -16,9 +16,10 @@ export const taskReducer=(task,action)=>{
             ]
         }
         case 'changed':{
-            return task.map((item)=>{
-                item.id===action.task.id? action.task :item
-            })
+            return task.map((item)=>item.id===action.task.id? action.task :item)
+        }
+        case 'deleted':{
+            return task.filter((item)=>item.id!=action.id)
         }
     }
 }
