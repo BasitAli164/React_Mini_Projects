@@ -7,9 +7,12 @@ const BackGroundChanger = () => {
     <>
       {check ? (
         <>
+        {
+            ()=>{setTheme('#000')}
+        }
           <section
-            className={`h-screen w-sc bg-[${theme}] flex justify-center items-centers`}
-          >
+            className={`h-screen w-screen bg-[${theme}] flex justify-center items-centers`}
+            >
             <button
               className="px-10 py-2 rounded-full bg-red-600"
               onClick={()=>{
@@ -22,7 +25,14 @@ const BackGroundChanger = () => {
           </section>
         </>
       ) : (
-        <></>
+        <>
+            {
+                              ()=>{setTheme('#ffddcc')}
+
+            }        
+            
+        
+        </>
       )}
     </>
   );

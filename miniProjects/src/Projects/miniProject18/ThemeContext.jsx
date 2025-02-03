@@ -3,7 +3,7 @@ const themeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("#000");
-  const [check,setCheck]=useState(false)
+  const [check,setCheck]=useState(true)
  
   return (
     <themeContext.Provider value={{ theme, setTheme,check,setCheck }}>
