@@ -15,5 +15,10 @@ export const taskReducer=(task,action)=>{
                 }
             ]
         }
+        case 'changed':{
+            return task.map((item)=>{
+                item.id===action.task.id? action.task :item
+            })
+        }
     }
 }
