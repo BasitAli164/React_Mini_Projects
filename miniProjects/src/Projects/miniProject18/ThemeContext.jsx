@@ -2,18 +2,11 @@ import { createContext, useContext, useState } from "react";
 const themeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("#fffddcc");
+  const [theme, setTheme] = useState("#000");
   const [check,setCheck]=useState(false)
-  if(check){
-    setTheme('#fff')
-  }else{
-    setTheme('#000')
-  }
-  const handleCheck=()=>{
-    setCheck(!check)
-  }
+ 
   return (
-    <themeContext.Provider value={{ theme, setTheme,check,handleCheck }}>
+    <themeContext.Provider value={{ theme, setTheme,check,setCheck }}>
       {children}
     </themeContext.Provider>
   );
