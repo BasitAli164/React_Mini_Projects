@@ -58,8 +58,7 @@ const App = () => {
         <Login/>
       </ThemeProviders> */}
       {/* <MyApp/> */}
-      <Task/>
-
+      <Task />
     </>
   );
 };
