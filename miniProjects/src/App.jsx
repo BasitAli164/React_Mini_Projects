@@ -19,6 +19,8 @@ import CounterProvider from "./Projects/miniProject16/CounterProvider";
 import CounterExample from "./Projects/miniProject16/Counter";
 import { CounterProvider2 } from "./Projects/miniProject17/CounterContext";
 import CounterApp from "./Projects/miniProject17/CounterApp";
+import { ThemeProvider } from "./Projects/miniProject18/ThemeContext";
+import BackGroundChanger from "./Projects/miniProject18/BackGroundChanger";
 
 const App = () => {
   return (
@@ -42,9 +44,12 @@ const App = () => {
       {/* <CounterProvider>
         <CounterExample />
       </CounterProvider> */}
-      <CounterProvider2>
+      {/* <CounterProvider2>
         <CounterApp />
-      </CounterProvider2>
+      </CounterProvider2> */}
+      <ThemeProvider>
+        <BackGroundChanger/>
+      </ThemeProvider>
     </>
   );
 };
