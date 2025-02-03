@@ -2,20 +2,28 @@ import React from "react";
 import { useTheme } from "./ThemeContext";
 
 const BackGroundChanger = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, check,handleCheck } = useTheme();
   return (
-    <section
+  <>
+  {
+    check?(
+        <>
+         <section
       className={`h-screen w-sc bg-[${theme}] flex justify-center items-center`}
     >
       <button
         className="px-10 py-2 rounded-full bg-red-600"
-        onClick={() => {
-            setTheme('#000')
-        }}
+        onClick={handleCheck}
       >
         Click
       </button>
     </section>
+        </>
+    ):(
+        <></>
+    )
+  }
+  </>
   );
 };
 
