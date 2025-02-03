@@ -3,7 +3,6 @@ import { useTheme } from "./ThemeContext";
 
 const BackGroundChanger = () => {
   const { theme, setTheme } = useTheme();
-  console.log("theme is:",theme)
   return (
     <section
       className={`h-screen w-sc bg-[${theme}] flex justify-center items-center`}
@@ -11,7 +10,6 @@ const BackGroundChanger = () => {
       <button
         className="px-10 py-2 rounded-full bg-red-600"
         onClick={() => {
-            console.log("object")
             setTheme('#000')
         }}
       >
