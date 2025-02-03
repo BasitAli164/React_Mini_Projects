@@ -21,5 +21,8 @@ export const taskReducer=(task,action)=>{
         case 'deleted':{
             return task.filter((item)=>item.id!=action.id)
         }
+        default:{
+            throw Error(`Unknown Action ${action.type}`)
+        }
     }
 }
