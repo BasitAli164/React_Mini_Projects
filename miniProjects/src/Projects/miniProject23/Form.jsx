@@ -14,8 +14,8 @@ const Form = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('StoredData',JSON.stringify(data))
-    console.log(data)
+    localStorage.setItem("StoredData", JSON.stringify(data));
+    console.log(data);
 
     setData({
       userName: "",
@@ -26,7 +26,7 @@ const Form = () => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
-  const loacalData=JSON.parse(localStorage.getItem('StoredData'))
+  const loacalData = JSON.parse(localStorage.getItem("StoredData"));
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center gap-2">
       <h1 className="text-3xl font-bold ">
@@ -78,16 +78,11 @@ const Form = () => {
           {toggle ? "Login" : " Register"}
         </span>
       </p>
-      <br /><br />
-      {  
-        toggle &&(
-            <p>userName : {loacalData.userName}</p>
-
-        )
-      }
+      <br />
+      <br />
+      {toggle && <p>userName : {loacalData.userName}</p>}
       <p>email : {loacalData.email}</p>
       <p>password: {loacalData.password}</p>
-
     </div>
   );
 };
