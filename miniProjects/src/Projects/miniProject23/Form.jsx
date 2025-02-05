@@ -6,12 +6,14 @@ const Form = () => {
     email: "",
     password: "",
   });
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const takeValue = (e) => {
     setData({
       ...data,
-      [e.target.name]: [e.target.value],
+      [e.target.name]: e.target.value,
     });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
     setData({
       userName: "",
@@ -31,32 +33,35 @@ const Form = () => {
       <form onSubmit={handleSubmit} className="flex flex-col">
         <div className="flex gap-4">
           <div className="flex flex-col gap-y-4">
-            {toggle && <label>username:</label>}
-            <label>email:</label>
-            <label>password:</label>
+            {toggle && <label>Username:</label>}
+            <label>Email:</label>
+            <label>Password:</label>
           </div>
           <div className="flex flex-col gap-y-4">
             {toggle && (
               <input
                 type="text"
+                name="userName"
                 value={data.userName}
-                onChange={(e) => setData(e.target.value)}
+                onChange={takeValue}
               />
             )}
             <input
               type="email"
+              name="email"
               value={data.email}
-              onChange={(e) => setData(e.target.value)}
+              onChange={takeValue}
             />
             <input
               type="password"
-              value={data.userName}
-              onChange={(e) => setData(e.target.value)}
+              name="password"
+              value={data.password}
+              onChange={takeValue}
             />
           </div>
         </div>
         <div className="flex justify-center items-center gap-4">
-          <button className="px-7 py-2 rounded-full bg-cyan-500 font-bold my-5">
+          <button className="px-5 py-1 rounded-full bg-cyan-500 font-bold my-5">
             Submit
           </button>
         </div>
@@ -64,7 +69,7 @@ const Form = () => {
       <p>
         {toggle ? "You don't have account" : "You have account already"}
         <span
-          className="text-cyan-500 cursor-pointer mx-3"
+          className="text-cyan-500 cursor-pointer mx-1"
           onClick={handleToggle}
         >
           {toggle ? "Login" : " Register"}
