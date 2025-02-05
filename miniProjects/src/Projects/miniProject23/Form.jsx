@@ -14,6 +14,8 @@ const Form = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    localStorage.setItem('StoredData',JSON.stringify(data))
+    console.log(data)
 
     setData({
       userName: "",
