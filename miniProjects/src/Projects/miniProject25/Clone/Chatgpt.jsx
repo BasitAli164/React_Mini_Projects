@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import logo from '../assets/imglogo.jpg'
 
 const Chatgpt = () => {
   return (
@@ -7,7 +8,7 @@ const Chatgpt = () => {
         <div className="sidebar">
           <div className="upperSide">
             <div className="upperSideTop">
-              <img src="" alt="" className="logo" />
+              <img src={logo} alt="" className="logo" />
               <span className="brand">ChatGPT</span>
               <button className="midbtn"><img src="" alt="" className="addBtn" />New Chat</button>
               <div className="upperSideBottom">
