@@ -5,7 +5,8 @@ const Chatgpt = () => {
     <>
     <div className="App">
         <div className="sidebar">
-            <h1>hello</h1>
+          <div className="upperSide"></div>
+          <div className="lowerside"></div>
         </div>
         <div className="main">
 
