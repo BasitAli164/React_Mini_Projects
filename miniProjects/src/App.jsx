@@ -28,6 +28,7 @@ import Task from "./Projects/miniProject21/Task";
 import AddToCartForm from "./Projects/miniProject22/AddToCartForm";
 import Form from "./Projects/miniProject23/Form";
 import Quize from "./Projects/miniProject24/QuizApp/Quize";
+import Chatgpt from "./Projects/miniProject25/Clone/Chatgpt";
 
 const App = () => {
   return (
@@ -66,9 +67,12 @@ const App = () => {
       {/* <AddToCartForm itemID="1" itemTitle="JavaScript: The Definitive Guide" />
       <AddToCartForm itemID="2" itemTitle="JavaScript: The Good Parts" /> */}
     </div>
-    <div className="h-screen w-full bg-[#5b469f] flex justify-center items-center">
+    {/* <div className="h-screen w-full bg-[#5b469f] flex justify-center items-center"> */}
       {/* <Form/> */}
-      <Quize/>
+      {/* <Quize/> */}
+    {/* </div> */}
+    <div>
+      <Chatgpt/>
     </div>
     
     </>

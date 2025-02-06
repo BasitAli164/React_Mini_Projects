@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Chat = () => {
+const Chatgpt = () => {
   return (
     <>
     <div className="App">
         <div className="sidebar">
-            
+            <h1>hello</h1>
         </div>
         <div className="main">
 
@@ -16,4 +16,4 @@ const Chat = () => {
   )
 }
 
-export default Chat
+export default Chatgpt
