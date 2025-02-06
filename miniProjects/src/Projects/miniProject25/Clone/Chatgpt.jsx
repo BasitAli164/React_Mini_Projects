@@ -1,15 +1,15 @@
 import React from 'react';
-import gptLogo from '../assets/imglogo.jpg'
+import gptLogo from '../assets/gptlogo2.svg'
 import {Plus} from 'react-feather'
 
 const Chatgpt = () => {
   return (
     <>
-    <div className="App bg-[rgb(3,0,31)] text-white h-screen w-screen">
-        <div className="sidebar">
+    <div className="App bg-[rgb(3,0,31)] text-white min-h-screen w-screen flex">
+        <div className="sidebar flex-3">
           <div className="upperSide">
             <div className="upperSideTop">
-              <img src={gptLogo} alt="GPT-Logo" className="logo" />
+              <img src={gptLogo} alt="GPT-Logo" className="w-20" />
               <span className="brand">ChatGPT</span>
               <button className="midbtn"><Plus/>New Chat</button>
               <div className="upperSideBottom">
@@ -20,7 +20,8 @@ const Chatgpt = () => {
           </div>
           <div className="lowerside"></div>
         </div>
-        <div className="main">
+        <div className="main flex-9 bg-purple-600">
+          <h1>hello</h1>
 
         </div>
     </div>
