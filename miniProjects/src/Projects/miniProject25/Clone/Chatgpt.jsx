@@ -9,7 +9,11 @@ const Chatgpt = () => {
             <div className="upperSideTop">
               <img src="" alt="" className="logo" />
               <span className="brand">ChatGPT</span>
-              <button className="midbtn"></button>
+              <button className="midbtn"><img src="" alt="" className="addBtn" />New Chat</button>
+              <div className="upperSideBottom">
+                <button className="query"><img src="" alt="" />What is Programming ?</button>
+                <button className="query"><img src="" alt="" />What is Programming ?</button>
+              </div>
             </div>
           </div>
           <div className="lowerside"></div>
