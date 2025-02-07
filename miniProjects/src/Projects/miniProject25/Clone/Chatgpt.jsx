@@ -1,6 +1,6 @@
 import React from 'react';
 import gptLogo from '../assets/gptlogo1.jpg'
-import {Plus,MessageSquare,Home,Save} from 'react-feather'
+import {Plus,MessageSquare,Home,Save,ArrowUpCircle} from 'react-feather'
 
 const Chatgpt = () => {
   return (
@@ -26,8 +26,13 @@ const Chatgpt = () => {
               <Home/>
               <span>Home</span>
              </div>
+             <div className='flex'>
+              <Save/>
+              <span>Save</span>
+             </div>
              <div>
-
+              <ArrowUpCircle/>
+              <span>Upgrade to Pro</span>
              </div>
             </div>
           </div>
