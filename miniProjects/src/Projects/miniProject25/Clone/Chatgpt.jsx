@@ -6,7 +6,7 @@ const Chatgpt = () => {
   return (
     <>
     <div className="App bg-[rgb(3,0,31)] text-white min-h-screen w-screen flex">
-        <div className="sidebar flex-3">
+        <div className="sidebar flex-3 border-r-4">
           <div className="upperSide">
             <div className="upperSideTop">
               <img src={gptLogo} alt="GPT-Logo" className="w-20" />
