@@ -7,7 +7,7 @@ const Chatgpt = () => {
     <>
       <div className="App bg-[rgb(3,0,31)] text-white min-h-screen w-screen flex ">
         <div className="sidebar w-[300px] border-r-4 border-solid border-[rgb(110,108,108)]">
-          <div className="upperSide p-9">
+          <div className="upperSide p-9 border-b-[4px] border-solid border-[rgb(100,100,100)]">
             <div className="upperSideTop flex flex-col gap-y-3">
               <div className="flex items-center ml-2 gap-4">
                 <img
@@ -26,9 +26,9 @@ const Chatgpt = () => {
                   <MessageSquare />
                   <span className="mx-2">What is Programming ?</span>
                 </button>
-                <button className="query flex px-[27px] py-2 rounded-md border-[1px] border-dotted my-4  ">
+                <button className="query flex px-[15px] py-2 rounded-md border-[1px] border-dotted my-4  ">
                   <MessageSquare />
-                  <span className="mx-2">How to use API ?</span>
+                  <span className="mx-2">How to use an API ?</span>
                 </button>
               </div>
             </div>
