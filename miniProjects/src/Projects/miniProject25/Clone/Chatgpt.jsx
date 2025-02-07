@@ -17,7 +17,7 @@ const Chatgpt = () => {
                 />
                 <span className="brand text-2xl font-bold">ChatGPT</span>
               </div>
-              <button className="midbtn px-12 py-2 ml-2 rounded-md bg-purple-400 flex justify-center text-xl items-center gap-2 mt-8">
+              <button className="midbtn px-12 py-2 ml-2 rounded-md bg-[#5a4bff] flex justify-center text-xl items-center gap-2 mt-8">
                 <Plus />
                 New Chat
               </button>
