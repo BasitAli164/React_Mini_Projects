@@ -10,7 +10,7 @@ const Chatgpt = () => {
           <div className="upperSide p-5">
             <div className="upperSideTop flex flex-col gap-y-3">
               <div className='flex items-center ml-2 gap-4'>
-              <img  src={gptLogo} alt="GPT-Logo" className="w-20 rounded-full " />
+              <img  src={gptLogo} alt="GPT-Logo" className="w-14 rounded-full  " />
               <span className="brand text-3xl font-bold">ChatGPT</span>
               </div>
               <button className="midbtn px-4 py-3 ml-2 rounded-md bg-purple-400 flex justify-center text-2xl items-center gap-2"><Plus/>New Chat</button>
