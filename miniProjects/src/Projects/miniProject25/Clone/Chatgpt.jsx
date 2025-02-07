@@ -7,8 +7,8 @@ const Chatgpt = () => {
     <>
       <div className="App bg-[rgb(3,0,31)] text-white min-h-screen w-screen flex ">
         <div className="sidebar w-[300px] border-r-4 border-solid border-[rgb(110,108,108)]">
-          <div className="upperSide p-9 border-b-[4px] border-solid border-[rgb(100,100,100)]">
-            <div className="upperSideTop flex flex-col gap-y-3">
+          <div className="upperSide p-9 border-b-[4px] border-solid border-[rgb(100,100,100)] h-[70%]">
+            <div className="upperSideTop flex flex-col gap-y-3 items-center">
               <div className="flex items-center ml-2 gap-4">
                 <img
                   src={gptLogo}
@@ -17,7 +17,7 @@ const Chatgpt = () => {
                 />
                 <span className="brand text-2xl font-bold">ChatGPT</span>
               </div>
-              <button className="midbtn px-3 py-2 ml-2 rounded-md bg-purple-400 flex justify-center text-xl items-center gap-2 mt-8">
+              <button className="midbtn px-12 py-2 ml-2 rounded-md bg-purple-400 flex justify-center text-xl items-center gap-2 mt-8">
                 <Plus />
                 New Chat
               </button>
