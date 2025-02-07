@@ -1,6 +1,6 @@
 import React from 'react';
 import gptLogo from '../assets/gptlogo1.jpg'
-import {Plus,MessageSquare} from 'react-feather'
+import {Plus,MessageSquare,Home,Save} from 'react-feather'
 
 const Chatgpt = () => {
   return (
@@ -20,7 +20,17 @@ const Chatgpt = () => {
               </div>
             </div>
           </div>
-          <div className="lowerside"></div>
+          <div className="lowerside">
+            <div className="listItem">
+             <div className='flex'>
+              <Home/>
+              <span>Home</span>
+             </div>
+             <div>
+
+             </div>
+            </div>
+          </div>
         </div>
         <div className="main flex-9 bg-purple-600">
           <h1>hello</h1>
