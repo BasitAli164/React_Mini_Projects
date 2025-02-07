@@ -8,8 +8,8 @@ const Chatgpt = () => {
       <div className="App bg-[rgb(3,0,31)] text-white min-h-screen w-screen flex ">
         <div className="sidebar w-[300px] border-r-4 border-solid border-[rgb(110,108,108)]">
           <div className="upperSide p-9 border-b-[4px] border-solid border-[rgb(100,100,100)] h-[70%]">
-            <div className="upperSideTop flex flex-col gap-y-3 items-center">
-              <div className="flex items-center ml-2 gap-4">
+            <div className="upperSideTop flex flex-col gap-y-1 ">
+              <div className="flex items-center ml-2 gap-1">
                 <img
                   src={gptLogo}
                   alt="GPT-Logo"
@@ -17,7 +17,7 @@ const Chatgpt = () => {
                 />
                 <span className="brand text-2xl font-bold">ChatGPT</span>
               </div>
-              <button className="midbtn px-12 py-2 ml-2 rounded-md bg-[#5a4bff] flex justify-center text-xl items-center gap-2 mt-8">
+              <button className="midbtn px-12 py-2 ml-2 rounded-sm bg-[#5a4bff] flex justify-center text-xl items-center gap-2 mt-8">
                 <Plus />
                 New Chat
               </button>
@@ -33,19 +33,19 @@ const Chatgpt = () => {
               </div>
             </div>
           </div>
-          <div className="lowerside">
-            <div className="listItem">
-              <div className="flex">
+          <div className="lowerside p-[32px]">
+            <div className="listItem flex flex-col gap-4">
+              <div className="flex gap-2">
                 <Home />
-                <span>Home</span>
+                <span className="font-bold">Home</span>
               </div>
-              <div className="flex">
+              <div className="flex gap-2">
                 <Save />
-                <span>Save</span>
+                <span className="font-bold">Save</span>
               </div>
-              <div className="flex">
+              <div className="flex gap-2">
                 <ArrowUpCircle />
-                <span>Upgrade to Pro</span>
+                <span className="font-bold">Upgrade to Pro</span>
               </div>
             </div>
           </div>
