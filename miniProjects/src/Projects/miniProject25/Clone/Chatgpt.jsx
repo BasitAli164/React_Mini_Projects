@@ -53,7 +53,10 @@ const Chatgpt = () => {
         <div className="main flex-9 bg-purple-600">
           <div className="chat"></div>
           <div className="chatfooter">
-            
+            <div className="inp">
+              <input type="text" name="" id="" />
+              <button><Send/>Send</button>
+            </div>
           </div>
         </div>
       </div>
