@@ -81,18 +81,19 @@ const Chatgpt = () => {
             </div>
            
           </div>
-          <div className="chatfooter">
-            <div className="inp">
+          <div className="chatfooter  mt-auto w-full flex flex-col items-center justify-center">
+            <div className="inp p-[6px] bg-[rgba(28,30,58,1)] flex justify-center items-center rounded-md">
               <input
                 type="text"
                 name=""
                 id=""
                 placeholder="Send a message..."
+                className="w-[100%] h-5 outline-none p-[1.25rem] bg-[rgba(28,30,58,1)] text-white"
               />
-              <button>
-                <Send />
-                Send
-              </button>
+                     <Send className="transform rotate-[45deg] w-10 h-10 text-gray-500" />
+
+             
+               
             </div>
           </div>
         </div>
