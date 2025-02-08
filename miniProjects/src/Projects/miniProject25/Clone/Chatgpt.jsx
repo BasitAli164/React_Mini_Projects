@@ -1,6 +1,7 @@
 import React from "react";
 import gptLogo from "../assets/gptlogo1.jpg";
 import gptInside from "../assets/gpt.jpg";
+import userImage from '../assets/user.jpg'
 import {
   Plus,
   MessageSquare,
@@ -8,7 +9,6 @@ import {
   Save,
   ArrowUpCircle,
   Send,
-  User,
 } from "react-feather";
 
 const Chatgpt = () => {
@@ -62,7 +62,7 @@ const Chatgpt = () => {
         <div className="main flex-9 bg-purple-600">
           <div className="chats">
             <div className="chat">
-              <img src={gptInside} alt="" />
+              <img src={userImage} alt="" />
               <p className="txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 omnis similique fugiat voluptatibus optio? Perferendis
@@ -71,7 +71,7 @@ const Chatgpt = () => {
               </p>
             </div>
             <div className="chat">
-              <User/>
+              <img src={gptInside} alt="" />
               <p className="txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 omnis similique fugiat voluptatibus optio? Perferendis
