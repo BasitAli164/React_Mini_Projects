@@ -70,7 +70,7 @@ const Chatgpt = () => {
                 magnam reiciendis esse rerum ipsam voluptatibus earum, aut ipsa.
               </p>
             </div>
-            <div className="chat m-[16px] px-[3rem] py-[2rem]">
+            <div className="chat m-[16px] px-[3rem] py-[2rem] flex items-start gap-2">
               <img
                 src={gptInside}
                 alt="GPT-Image"
