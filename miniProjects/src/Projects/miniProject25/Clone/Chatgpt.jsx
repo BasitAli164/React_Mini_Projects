@@ -51,7 +51,10 @@ const Chatgpt = () => {
           </div>
         </div>
         <div className="main flex-9 bg-purple-600">
-          <h1>hello</h1>
+          <div className="chat"></div>
+          <div className="chatfooter">
+            
+          </div>
         </div>
       </div>
     </>
