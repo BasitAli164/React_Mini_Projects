@@ -15,7 +15,7 @@ const Chatgpt = () => {
   return (
     <>
       <div className="App bg-[rgb(3,0,31)] text-white min-h-screen w-screen flex ">
-        <div className="sidebar w-[570px] h-screen border-r-2 border-solid border-[rgb(110,108,108)]">
+        <div className="sidebar w-[370px] h-screen border-r-2 border-solid border-[rgb(110,108,108)]">
           <div className="upperSide p-9 border-b-[2px] border-solid border-[rgb(100,100,100)] h-[70%]">
             <div className="upperSideTop flex flex-col gap-y-1 ">
               <div className="flex items-center ml-1 gap-1">
@@ -61,8 +61,8 @@ const Chatgpt = () => {
         </div>
         <div className="main flex items-center justify-center flex-col min-h-[80%] mx-[50px] my-[80px] mb-0  ">
           <div className="chats overflow-hidden overflow-y-scroll scroll-smooth w-full max-w-[70rem] h-[800px]">
-            <div className="chat">
-              <img src={userImage} alt="User" className="w-14 rounded-md" />
+            <div className="chat m-[16px] px-[3rem] py-[2rem] flex items-start text-justify">
+              <img src={userImage} alt="User" className="w-[3.5rem] mr-[2rem] rounded-md " />
               <p className="txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 omnis similique fugiat voluptatibus optio? Perferendis
@@ -70,11 +70,11 @@ const Chatgpt = () => {
                 magnam reiciendis esse rerum ipsam voluptatibus earum, aut ipsa.
               </p>
             </div>
-            <div className="chat m-[16px] px-[3rem] py-[2rem] flex items-start gap-2">
+            <div className="chat m-[16px] px-[3rem] py-[2rem] flex items-start text-justify">
               <img
                 src={gptInside}
                 alt="GPT-Image"
-                className="w-14 rounded-md"
+                className="w-[3.5rem] mr-[2rem] rounded-md "
               />
               <p className="txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
