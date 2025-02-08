@@ -62,7 +62,7 @@ const Chatgpt = () => {
         <div className="main flex items-center justify-center flex-col min-h-[80%] mx-[50px] my-[80px]  ">
           <div className="chats">
             <div className="chat">
-              <img src={userImage} alt="User" className="w-14 rounded-md"/>
+              <img src={userImage} alt="User" className="w-14 rounded-md" />
               <p className="txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 omnis similique fugiat voluptatibus optio? Perferendis
@@ -71,7 +71,11 @@ const Chatgpt = () => {
               </p>
             </div>
             <div className="chat">
-              <img src={gptInside} alt="GPT-Image" className="w-14 rounded-md" />
+              <img
+                src={gptInside}
+                alt="GPT-Image"
+                className="w-14 rounded-md"
+              />
               <p className="txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 omnis similique fugiat voluptatibus optio? Perferendis
@@ -79,7 +83,6 @@ const Chatgpt = () => {
                 magnam reiciendis esse rerum ipsam voluptatibus earum, aut ipsa.
               </p>
             </div>
-           
           </div>
           <div className="chatfooter  mt-auto w-full flex flex-col items-center justify-center">
             <div className="inp w-[50rem] p-[6px] bg-[rgba(28,30,58,1)] flex justify-center items-center rounded-md">
@@ -90,10 +93,7 @@ const Chatgpt = () => {
                 placeholder="Send a message..."
                 className="w-[100%] h-5 outline-none p-[1.25rem] bg-[rgba(28,30,58,1)] text-white"
               />
-                     <Send className="transform rotate-[45deg] w-10 h-10 text-gray-500 mr-2" />
-
-             
-               
+              <Send className="transform rotate-[45deg] w-10 h-10 text-gray-500 mr-2" />
             </div>
           </div>
         </div>
