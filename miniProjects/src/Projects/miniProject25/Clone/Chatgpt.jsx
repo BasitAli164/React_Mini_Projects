@@ -59,8 +59,8 @@ const Chatgpt = () => {
             </div>
           </div>
         </div>
-        <div className="main flex items-center justify-center flex-col min-h-[850px] mx-[50px] my-[80px] mb-0  ">
-          <div className="chats overflow-hidden overflow-y-scroll scroll-smooth w-full max-w-[70rem] h-[50 ]">
+        <div className="main flex items-center justify-center flex-col max-h-[850px] mx-[50px] my-[80px] mb-0  ">
+          <div className="chats overflow-hidden overflow-y-scroll scroll-smooth w-full max-w-[70rem] h-[500px ]">
             <div className="chat m-[16px] px-[3rem] py-[2rem] flex items-start text-justify">
               <img src={userImage} alt="User" className="w-[3.5rem] mr-[2rem] rounded-lg  " />
               <p className="txt">
@@ -68,6 +68,7 @@ const Chatgpt = () => {
                 omnis similique fugiat voluptatibus optio? Perferendis
                 necessitatibus, temporibus porro labore, unde exercitationem
                 magnam reiciendis esse rerum ipsam voluptatibus earum, aut ipsa.
+                lorem400
               </p>
             </div>
             <div className="chat m-[16px] px-[3rem] py-[2rem] flex items-start text-justify bg-[rgba(28,30,58,1)] w-fit rounded-lg">
