@@ -59,7 +59,7 @@ const Chatgpt = () => {
             </div>
           </div>
         </div>
-        <div className="main flex items-center justify-center flex-col bg-purple-600 min-h-[80%] mx-[50px] my-[80px]  ">
+        <div className="main flex items-center justify-center flex-col min-h-[80%] mx-[50px] my-[80px]  ">
           <div className="chats">
             <div className="chat">
               <img src={userImage} alt="User" className="w-14 rounded-md"/>
@@ -82,7 +82,7 @@ const Chatgpt = () => {
            
           </div>
           <div className="chatfooter  mt-auto w-full flex flex-col items-center justify-center">
-            <div className="inp p-[6px] bg-[rgba(28,30,58,1)] flex justify-center items-center rounded-md">
+            <div className="inp w-[50rem] p-[6px] bg-[rgba(28,30,58,1)] flex justify-center items-center rounded-md">
               <input
                 type="text"
                 name=""
@@ -90,7 +90,7 @@ const Chatgpt = () => {
                 placeholder="Send a message..."
                 className="w-[100%] h-5 outline-none p-[1.25rem] bg-[rgba(28,30,58,1)] text-white"
               />
-                     <Send className="transform rotate-[45deg] w-10 h-10 text-gray-500" />
+                     <Send className="transform rotate-[45deg] w-10 h-10 text-gray-500 mr-2" />
 
              
                
