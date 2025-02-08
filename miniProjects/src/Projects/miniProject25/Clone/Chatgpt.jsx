@@ -59,7 +59,7 @@ const Chatgpt = () => {
             </div>
           </div>
         </div>
-        <div className="main flex items-center justify-center flex-col min-h-[80%] mx-[50px] my-[80px]  ">
+        <div className="main flex items-center justify-center flex-col min-h-[80%] mx-[50px] my-[80px] mb-0  ">
           <div className="chats">
             <div className="chat">
               <img src={userImage} alt="User" className="w-14 rounded-md" />
@@ -95,6 +95,7 @@ const Chatgpt = () => {
               />
               <Send className="transform rotate-[45deg] w-10 h-10 text-gray-500 mr-2" />
             </div>
+              <p className="text-md mt-1 text-gray-300">ChatGPT can make mistakes. Check important info.</p>
           </div>
         </div>
       </div>
