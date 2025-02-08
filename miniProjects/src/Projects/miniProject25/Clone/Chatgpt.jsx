@@ -1,7 +1,7 @@
 import React from "react";
 import gptLogo from "../assets/gptlogo1.jpg";
 import gptInside from "../assets/gpt.jpg";
-import userImage from '../assets/user.jpg'
+import userImage from "../assets/user.jpg";
 import {
   Plus,
   MessageSquare,
@@ -62,7 +62,7 @@ const Chatgpt = () => {
         <div className="main flex-9 bg-purple-600">
           <div className="chats">
             <div className="chat">
-              <img src={userImage} alt="" />
+              <img src={userImage} alt="User" className="w-14 rounded-md"/>
               <p className="txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 omnis similique fugiat voluptatibus optio? Perferendis
@@ -71,7 +71,7 @@ const Chatgpt = () => {
               </p>
             </div>
             <div className="chat">
-              <img src={gptInside} alt="" />
+              <img src={gptInside} alt="GPT-Image" className="w-14 rounded-md" />
               <p className="txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 omnis similique fugiat voluptatibus optio? Perferendis
@@ -79,15 +79,7 @@ const Chatgpt = () => {
                 magnam reiciendis esse rerum ipsam voluptatibus earum, aut ipsa.
               </p>
             </div>
-            <div className="chat">
-              <img src={gptInside} alt="" />
-              <p className="txt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                omnis similique fugiat voluptatibus optio? Perferendis
-                necessitatibus, temporibus porro labore, unde exercitationem
-                magnam reiciendis esse rerum ipsam voluptatibus earum, aut ipsa.
-              </p>
-            </div>
+           
           </div>
           <div className="chatfooter">
             <div className="inp">
