@@ -1,6 +1,6 @@
 import React from "react";
 import gptLogo from "../assets/gptlogo1.jpg";
-import { Plus, MessageSquare, Home, Save, ArrowUpCircle } from "react-feather";
+import { Plus, MessageSquare, Home, Save, ArrowUpCircle,Send} from "react-feather";
 
 const Chatgpt = () => {
   return (
