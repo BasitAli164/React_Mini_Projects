@@ -1,6 +1,14 @@
 import React from "react";
 import gptLogo from "../assets/gptlogo1.jpg";
-import { Plus, MessageSquare, Home, Save, ArrowUpCircle,Send} from "react-feather";
+import gptInside from "../assets/gpt.jpg";
+import {
+  Plus,
+  MessageSquare,
+  Home,
+  Save,
+  ArrowUpCircle,
+  Send,
+} from "react-feather";
 
 const Chatgpt = () => {
   return (
@@ -53,14 +61,27 @@ const Chatgpt = () => {
         <div className="main flex-9 bg-purple-600">
           <div className="chats">
             <div className="chat">
-              <img src="" alt="" />
-              <p className="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et omnis similique fugiat voluptatibus optio? Perferendis necessitatibus, temporibus porro labore, unde exercitationem magnam reiciendis esse rerum ipsam voluptatibus earum, aut ipsa.</p>
+              <img src={gptInside} alt="" />
+              <p className="txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                omnis similique fugiat voluptatibus optio? Perferendis
+                necessitatibus, temporibus porro labore, unde exercitationem
+                magnam reiciendis esse rerum ipsam voluptatibus earum, aut ipsa.
+              </p>
             </div>
           </div>
           <div className="chatfooter">
             <div className="inp">
-              <input type="text" name="" id=""  placeholder="Send a message..."/>
-              <button><Send/>Send</button>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Send a message..."
+              />
+              <button>
+                <Send />
+                Send
+              </button>
             </div>
           </div>
         </div>
