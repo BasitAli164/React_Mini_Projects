@@ -51,10 +51,15 @@ const Chatgpt = () => {
           </div>
         </div>
         <div className="main flex-9 bg-purple-600">
-          <div className="chat"></div>
+          <div className="chats">
+            <div className="chat">
+              <img src="" alt="" />
+              <p className="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et omnis similique fugiat voluptatibus optio? Perferendis necessitatibus, temporibus porro labore, unde exercitationem magnam reiciendis esse rerum ipsam voluptatibus earum, aut ipsa.</p>
+            </div>
+          </div>
           <div className="chatfooter">
             <div className="inp">
-              <input type="text" name="" id="" />
+              <input type="text" name="" id=""  placeholder="Send a message..."/>
               <button><Send/>Send</button>
             </div>
           </div>
