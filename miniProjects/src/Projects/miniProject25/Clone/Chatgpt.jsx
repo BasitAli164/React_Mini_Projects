@@ -62,7 +62,11 @@ const Chatgpt = () => {
         <div className="main flex items-center justify-center flex-col max-h-[850px] mx-[50px] my-[80px] mb-0  ">
           <div className="chats overflow-hidden overflow-y-scroll scroll-smooth w-full max-w-[70rem] h-[500px ]">
             <div className="chat m-[16px] px-[3rem] py-[2rem] flex items-start text-justify">
-              <img src={userImage} alt="User" className="w-[3.5rem] mr-[2rem] rounded-lg  " />
+              <img
+                src={userImage}
+                alt="User"
+                className="w-[3.5rem] mr-[2rem] rounded-lg  "
+              />
               <p className="txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 omnis similique fugiat voluptatibus optio? Perferendis
@@ -96,7 +100,9 @@ const Chatgpt = () => {
               />
               <Send className="transform rotate-[45deg] w-10 h-10 text-gray-500 mr-2" />
             </div>
-              <p className="text-md my-2 text-gray-300">ChatGPT can make mistakes. Check important info.</p>
+            <p className="text-md my-2 text-gray-300">
+              ChatGPT can make mistakes. Check important info.
+            </p>
           </div>
         </div>
       </div>
