@@ -15,10 +15,10 @@ const Chatgpt = () => {
   return (
     <>
       <div className="App bg-[rgb(3,0,31)] text-white min-h-screen w-screen flex ">
-        <div className="sidebar w-[300px] border-r-2 border-solid border-[rgb(110,108,108)]">
+        <div className="sidebar w-[510px] h-screen border-r-2 border-solid border-[rgb(110,108,108)]">
           <div className="upperSide p-9 border-b-[2px] border-solid border-[rgb(100,100,100)] h-[70%]">
             <div className="upperSideTop flex flex-col gap-y-1 ">
-              <div className="flex items-center ml-2 gap-1">
+              <div className="flex items-center ml-1 gap-1">
                 <img
                   src={gptLogo}
                   alt="GPT-Logo"
@@ -26,11 +26,11 @@ const Chatgpt = () => {
                 />
                 <span className="brand text-2xl font-bold">ChatGPT</span>
               </div>
-              <button className="midbtn px-12 py-2 ml-2 rounded-sm bg-[#5a4bff] flex justify-center text-xl items-center gap-2 mt-8">
+              <button className="midbtn px-12 py-2 ml-1 rounded-sm bg-[#5a4bff] flex justify-center text-xl items-center gap-2 mt-8">
                 <Plus />
                 New Chat
               </button>
-              <div className="upperSideBottom ml-2 mt-5">
+              <div className="upperSideBottom ml-1 mt-5">
                 <button className="query flex px-1 py-2 rounded-md border-[1px] border-dotted my-4  ">
                   <MessageSquare />
                   <span className="mx-2">What is Programming ?</span>
@@ -59,7 +59,7 @@ const Chatgpt = () => {
             </div>
           </div>
         </div>
-        <div className="main flex-9 bg-purple-600">
+        <div className="main flex-9 bg-purple-600 min-h-[20%]">
           <div className="chats">
             <div className="chat">
               <img src={userImage} alt="User" className="w-14 rounded-md"/>
