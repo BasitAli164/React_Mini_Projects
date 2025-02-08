@@ -15,7 +15,7 @@ const Chatgpt = () => {
   return (
     <>
       <div className="App bg-[rgb(3,0,31)] text-white min-h-screen w-screen flex ">
-        <div className="sidebar w-[510px] h-screen border-r-2 border-solid border-[rgb(110,108,108)]">
+        <div className="sidebar w-[570px] h-screen border-r-2 border-solid border-[rgb(110,108,108)]">
           <div className="upperSide p-9 border-b-[2px] border-solid border-[rgb(100,100,100)] h-[70%]">
             <div className="upperSideTop flex flex-col gap-y-1 ">
               <div className="flex items-center ml-1 gap-1">
@@ -59,7 +59,7 @@ const Chatgpt = () => {
             </div>
           </div>
         </div>
-        <div className="main flex-9 bg-purple-600 min-h-[20%]">
+        <div className="main flex items-center justify-center flex-col bg-purple-600 min-h-[80%] mx-[50px] my-[80px]  ">
           <div className="chats">
             <div className="chat">
               <img src={userImage} alt="User" className="w-14 rounded-md"/>
