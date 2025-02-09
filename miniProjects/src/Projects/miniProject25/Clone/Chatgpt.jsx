@@ -85,7 +85,7 @@ const Chatgpt = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 omnis similique fugiat voluptatibus optio? Perferendis
                 necessitatibus, temporibus porro labore, unde exercitationem
-                magnam reiciendis esse rerum ipsam voluptatibus earum, aut ipsa.
+                magnam reiciendidss esse rerum ipsam voluptatibus earum, aut ipsa.
               </p>
             </div>
           </div>
